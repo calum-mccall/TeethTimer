@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
     fun timer(millisInFuture:Long, countDownInterval:Long):CountDownTimer {
         return object: CountDownTimer(millisInFuture, countDownInterval){
-            override fun onTick(p0: Long) {
-                textView_timer.text = "$millisInFuture"
+            override fun onTick(millisInFuture: Long) {
+                textView_timer.text = millisInFuture.toString()
             }
 
             override fun onFinish() {
@@ -32,8 +32,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startTimer(view: View) {
-        textView_timer.text = "2:00"
 
-        timer(millisInFuture = (1000), countDownInterval = 1000).start()
+        timer(millisInFuture = (10000), countDownInterval = 1000).start()
     }
 }
