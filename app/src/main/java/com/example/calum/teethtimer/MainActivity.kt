@@ -16,19 +16,29 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    //Creates timer, the time it will last and the time between intervals
     fun timer(millisInFuture:Long, countDownInterval:Long):CountDownTimer {
         return object: CountDownTimer(millisInFuture, countDownInterval){
+            //Callback on interval time
             override fun onTick(millisInFuture: Long) {
-                textView_timer.text = (millisInFuture/1000).toString()
+
+                //Display the remaining time as minutes:seconds
+                val remainingTime = millisInFuture/1000
+
+                textView_timer.text = (remainingTime).toString()
             }
 
+            //Once the timer finishes
             override fun onFinish() {
                 textView_timer.text = "Finished"
+                button_start.isEnabled = true
             }
         }
     }
 
+    //When user clicks start button
     fun startTimer(view: View) {
-        timer(millisInFuture = (1000 * 60), countDownInterval = 1000).start()
+        timer(millisInFuture = (1000 * 30), countDownInterval = 1000).start()
+        button_start.isEnabled = false
     }
 }
