@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Teeth Timer</string>
+    <string name="timer_value">2:00</string>
 </resources>
