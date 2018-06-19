@@ -14,15 +14,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val millisInFuture:Long = 1000 * 60
-        val countDownInterval:Long = 1000
     }
 
     fun timer(millisInFuture:Long, countDownInterval:Long):CountDownTimer {
         return object: CountDownTimer(millisInFuture, countDownInterval){
             override fun onTick(millisInFuture: Long) {
-                textView_timer.text = millisInFuture.toString()
+                textView_timer.text = (millisInFuture/1000).toString()
             }
 
             override fun onFinish() {
@@ -32,7 +29,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startTimer(view: View) {
-
-        timer(millisInFuture = (10000), countDownInterval = 1000).start()
+        timer(millisInFuture = (1000 * 60), countDownInterval = 1000).start()
     }
 }
