@@ -7,6 +7,7 @@ import android.view.View
 import com.example.calum.teethtimer.R.string.timer_value
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+import java.util.concurrent.TimeUnit
 import kotlin.concurrent.timer
 
 class MainActivity : AppCompatActivity() {
@@ -23,9 +24,16 @@ class MainActivity : AppCompatActivity() {
             override fun onTick(millisInFuture: Long) {
 
                 //Display the remaining time as minutes:seconds
-                val remainingTime = millisInFuture/1000
+                //val remainingTime = millisInFuture/1000
 
-                textView_timer.text = (remainingTime).toString()
+                var millisInFuture:Long = millisInFuture
+
+                val remainingMinutes = TimeUnit.MILLISECONDS.toMinutes(millisInFuture)
+                millisInFuture -= TimeUnit.MINUTES.toMillis(remainingMinutes)
+                val remainingSeconds = TimeUnit.MILLISECONDS.toSeconds(millisInFuture)
+
+                textView_timer.text = String.format("%01d:%02d",remainingMinutes, remainingSeconds)
+                //textView_timer.text = (remainingMinutes).toString() + ":" + (remainingSeconds).toString()
             }
 
             //Once the timer finishes
@@ -38,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 
     //When user clicks start button
     fun startTimer(view: View) {
-        timer(millisInFuture = (1000 * 30), countDownInterval = 1000).start()
+        timer(millisInFuture = (1000 * 120), countDownInterval = 1000).start()
         button_start.isEnabled = false
     }
 }
