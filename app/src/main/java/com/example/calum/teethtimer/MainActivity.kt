@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
                 var millisInFuture:Long = millisInFuture
 
+                //Convert the remaining time into minutes:seconds
                 val remainingMinutes = TimeUnit.MILLISECONDS.toMinutes(millisInFuture)
                 millisInFuture -= TimeUnit.MINUTES.toMillis(remainingMinutes)
                 val remainingSeconds = TimeUnit.MILLISECONDS.toSeconds(millisInFuture)
