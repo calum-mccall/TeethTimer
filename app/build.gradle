@@ -30,4 +30,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //Konfetti library from - https://github.com/DanielMartinus/Konfetti
+    implementation 'nl.dionsegijn:konfetti:1.1.2'
+    //Wave Loading library from - https://github.com/tangqi92/WaveLoadingView
+    implementation 'me.itangqi.waveloadingview:library:0.3.5'
 }
