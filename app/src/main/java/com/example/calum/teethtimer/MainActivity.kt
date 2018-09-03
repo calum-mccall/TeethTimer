@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
     //When user clicks start button
     fun startTimer(view: View) {
-        timer(millisInFuture = (1000 * 5), countDownInterval = 1000).start()
+        timer(millisInFuture = (1000 * 120), countDownInterval = 1000).start()
         button_start.isEnabled = false
     }
 }
