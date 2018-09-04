@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
                 textView_timer.text = String.format("%01d:%02d",remainingMinutes, remainingSeconds)
                 //textView_timer.text = (remainingMinutes).toString() + ":" + (remainingSeconds).toString()
 
-                waveLoadingView.progressValue = waveLoadingView.progressValue - 10;
             }
 
             //Once the timer finishes
@@ -47,7 +46,6 @@ class MainActivity : AppCompatActivity() {
 
                 confettiSelector.firstTimeConfetti(viewKonfetti)
 
-                waveLoadingView.cancelAnimation();
             }
         }
     }

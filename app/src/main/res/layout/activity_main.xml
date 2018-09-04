@@ -40,13 +40,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <me.itangqi.waveloadingview.WaveLoadingView
-        android:id="@+id/waveLoadingView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:wlv_progressValue="50"
-        app:wlv_shapeType="square"
-        app:wlv_waveColor="@color/colorPrimary"
-        app:wlv_waveAmplitude="50"/>
-
 </android.support.constraint.ConstraintLayout>
