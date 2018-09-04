@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.View
+import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.TimeUnit
 
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
             override fun onFinish() {
                 textView_timer.text = "Finished"
                 button_start.isEnabled = true
+                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
                 confettiSelector.firstTimeConfetti(viewKonfetti)
 
@@ -54,5 +56,6 @@ class MainActivity : AppCompatActivity() {
     fun startTimer(view: View) {
         timer(millisInFuture = (1000 * 120), countDownInterval = 1000).start()
         button_start.isEnabled = false
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
     }
 }
