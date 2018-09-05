@@ -3,8 +3,10 @@ package com.example.calum.teethtimer;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.graphics.Color;
 import android.view.animation.DecelerateInterpolator;
+import android.view.animation.LinearInterpolator;
 
 import com.gelitenight.waveview.library.WaveView;
 
@@ -22,6 +24,8 @@ public class WaveHelper {
 
     public void start() {
         mWaveView.setWaveColor(Color.parseColor("#f49242"), Color.parseColor("#41c4f4"));
+        mWaveView.setShapeType(WaveView.ShapeType.SQUARE);
+
         mWaveView.setShowWave(true);
         if (mAnimatorSet != null) {
             mAnimatorSet.start();
@@ -30,6 +34,13 @@ public class WaveHelper {
 
     private void initAnimation() {
         List<Animator> animators = new ArrayList<>();
+
+        ObjectAnimator waveShiftAnim = ObjectAnimator.ofFloat(
+                mWaveView, "waveShiftRatio", 0f, 1f);
+        waveShiftAnim.setRepeatCount(ValueAnimator.INFINITE);
+        waveShiftAnim.setDuration(1000);
+        waveShiftAnim.setInterpolator(new LinearInterpolator());
+        animators.add(waveShiftAnim);
 
         ObjectAnimator waterLevelAnim = ObjectAnimator.ofFloat(
                 mWaveView, "waterLevelRatio", 0f, 0.5f);
