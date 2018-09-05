@@ -12,9 +12,13 @@ class MainActivity : AppCompatActivity() {
 
     var confettiSelector = ConfettiTypes()
 
+    var waveHelper = WaveHelper(null)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        waveHelper = WaveHelper(wave)
     }
 
     //Creates timer, the time it will last and the time between intervals
@@ -44,6 +48,8 @@ class MainActivity : AppCompatActivity() {
                 button_start.isEnabled = true
                 getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
+                waveHelper.cancel()
+
                 confettiSelector.firstTimeConfetti(viewKonfetti)
 
             }
@@ -56,8 +62,6 @@ class MainActivity : AppCompatActivity() {
         button_start.isEnabled = false
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
-        var waveView = wave
-        var waveHelper = WaveHelper(waveView)
         waveHelper.start()
     }
 }
