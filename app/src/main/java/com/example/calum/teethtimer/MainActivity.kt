@@ -55,5 +55,9 @@ class MainActivity : AppCompatActivity() {
         timer(millisInFuture = (1000 * 120), countDownInterval = 1000).start()
         button_start.isEnabled = false
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
+        var waveView = wave
+        var waveHelper = WaveHelper(waveView)
+        waveHelper.start()
     }
 }
