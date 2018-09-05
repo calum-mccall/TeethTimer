@@ -21,7 +21,7 @@ public class WaveHelper {
     }
 
     public void start() {
-        mWaveView.setBorder(10, Color.parseColor("#f44842"));
+        mWaveView.setWaveColor(Color.parseColor("#f49242"), Color.parseColor("#41c4f4"));
         mWaveView.setShowWave(true);
         if (mAnimatorSet != null) {
             mAnimatorSet.start();
