@@ -43,10 +43,18 @@ public class WaveHelper {
         animators.add(waveShiftAnim);
 
         ObjectAnimator waterLevelAnim = ObjectAnimator.ofFloat(
-                mWaveView, "waterLevelRatio", 0f, 0.5f);
-        waterLevelAnim.setDuration(10000);
+                mWaveView, "waterLevelRatio", 0f, 1f);
+        waterLevelAnim.setDuration(120000);
         waterLevelAnim.setInterpolator(new DecelerateInterpolator());
         animators.add(waterLevelAnim);
+
+        ObjectAnimator amplitudeAnim = ObjectAnimator.ofFloat(
+                mWaveView, "amplitudeRatio", 0.0001f, 0.05f);
+        amplitudeAnim.setRepeatCount(ValueAnimator.INFINITE);
+        amplitudeAnim.setRepeatMode(ValueAnimator.REVERSE);
+        amplitudeAnim.setDuration(5000);
+        amplitudeAnim.setInterpolator(new LinearInterpolator());
+        animators.add(amplitudeAnim);
 
         mAnimatorSet = new AnimatorSet();
         mAnimatorSet.playTogether(animators);
