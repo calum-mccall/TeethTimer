@@ -1,5 +1,6 @@
 package com.example.calum.teethtimer
 
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -13,6 +14,8 @@ class MainActivity : AppCompatActivity() {
     var confettiSelector = ConfettiTypes()
 
     var waveHelper = WaveHelper(null)
+
+    var notifications = Notifications(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +42,6 @@ class MainActivity : AppCompatActivity() {
 
                 textView_timer.text = String.format("%01d:%02d",remainingMinutes, remainingSeconds)
                 //textView_timer.text = (remainingMinutes).toString() + ":" + (remainingSeconds).toString()
-
             }
 
             //Once the timer finishes
@@ -51,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                 waveHelper.cancel()
 
                 confettiSelector.firstTimeConfetti(viewKonfetti)
-
             }
         }
     }
@@ -63,5 +64,7 @@ class MainActivity : AppCompatActivity() {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         waveHelper.start()
+
+        notifications.createNotification("Test", "Example notification")
     }
 }
