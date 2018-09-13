@@ -4,9 +4,11 @@ import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.support.v4.app.DialogFragment
 import android.view.View
 import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
@@ -66,5 +68,10 @@ class MainActivity : AppCompatActivity() {
         waveHelper.start()
 
         notifications.createNotification("Test", "Example notification")
+    }
+
+    fun showTimePickerDialog(view: View) {
+        var timePickerFragment = TimePickerFragment()
+        timePickerFragment.show(supportFragmentManager, "timePicker")
     }
 }

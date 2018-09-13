@@ -8,7 +8,9 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="355dp">
 
         <com.gelitenight.waveview.library.WaveView
             android:id="@+id/wave"
@@ -24,13 +26,13 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            tools:text="@string/timer_value"
             android:textSize="70sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3"/>
+            app:layout_constraintVertical_bias="0.3"
+            tools:text="@string/timer_value" />
 
         <Button
             android:id="@+id/button_start"
@@ -39,11 +41,24 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
-            android:text="Start"
             android:onClick="startTimer"
+            android:text="Start"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_timer" />
+
+        <Button
+            android:id="@+id/button_set_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:text="Set Alarm"
+            android:onClick="showTimePickerDialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_start" />
 
         <nl.dionsegijn.konfetti.KonfettiView
             android:id="@+id/viewKonfetti"
