@@ -13,14 +13,11 @@ public class TimePickerFragment extends DialogFragment
                                 implements TimePickerDialog.OnTimeSetListener{
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        //Use the current time as the default values for the picker
         final Calendar calendar = Calendar.getInstance();
-        int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        int minute =calendar.get(Calendar.MINUTE);
+        int currentHour = calendar.get(Calendar.HOUR_OF_DAY);
+        int currentMinute =calendar.get(Calendar.MINUTE);
 
-        //Create a new instance of TimePickerDialog and return it
-        return new TimePickerDialog(getActivity(), this, hour, minute,
-                android.text.format.DateFormat.is24HourFormat(getActivity()));
+        return new TimePickerDialog(getActivity(), this, currentHour, currentMinute,true);
     }
 
     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
