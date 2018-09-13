@@ -33,7 +33,7 @@ public class Notifications {
         mBuilder.setSmallIcon(R.drawable.ic_notification_24dp);
         mBuilder.setContentTitle(title)
                 .setContentText(message)
-                .setAutoCancel(false)
+                .setAutoCancel(true)
                 .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
                 .setContentIntent(resultPendingIntent);
 
