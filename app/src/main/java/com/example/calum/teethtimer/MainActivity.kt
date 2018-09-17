@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.support.v4.app.DialogFragment
+import android.support.v4.app.FragmentTransaction
+import android.view.Menu
 import android.view.View
 import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_main.*
@@ -73,5 +75,12 @@ class MainActivity : AppCompatActivity() {
     fun showTimePickerDialog(view: View) {
         var timePickerFragment = TimePickerFragment()
         timePickerFragment.show(supportFragmentManager, "timePicker")
+
+
+    }
+
+    fun setAlarm(view: View) {
+        var setAlarm = SetAlarm()
+        setAlarm.setAlarm(this)
     }
 }
