@@ -9,6 +9,7 @@ import android.nfc.Tag
 import android.os.SystemClock
 import android.util.Log
 import android.widget.Toast
+import java.util.*
 
 class SetAlarm {
 
@@ -17,19 +18,26 @@ class SetAlarm {
     private var alarmMgr: AlarmManager? = null
     private lateinit var alarmIntent: PendingIntent
 
-    fun setAlarm(context: Context) {
+    fun setAlarm(context: Context, hour: Int, minute: Int) {
         alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
             PendingIntent.getBroadcast(context, REQUEST_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT)
         }
 
+        val calendar: Calendar = Calendar.getInstance().apply {
+            timeInMillis = System.currentTimeMillis()
+            set(Calendar.HOUR_OF_DAY, hour)
+            set(Calendar.MINUTE, minute)
+        }
+
         alarmMgr?.setInexactRepeating(
-                AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                SystemClock.elapsedRealtime() + 10 * 1000,
-                AlarmManager.INTERVAL_FIFTEEN_MINUTES,
+                AlarmManager.RTC_WAKEUP,
+                calendar.timeInMillis,
+                AlarmManager.INTERVAL_DAY,
                 alarmIntent
         )
+
         Toast.makeText(context, "Alarm set", Toast.LENGTH_SHORT).show()
-        Log.i(TAG, "Alarm set")
+        Log.i(TAG, "Alarm set for: " + hour + ":" + minute)
     }
 }
