@@ -21,6 +21,7 @@ public class TimePickerFragment extends DialogFragment
     }
 
     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
-        
+        SetAlarm setAlarm = new SetAlarm();
+        setAlarm.setAlarm(getContext());
     }
 }

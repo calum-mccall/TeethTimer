@@ -31,8 +31,5 @@ class SetAlarm {
         )
         Toast.makeText(context, "Alarm set", Toast.LENGTH_SHORT).show()
         Log.i(TAG, "Alarm set")
-        //var alarmReceiver = AlarmReceiver()
-        //alarmReceiver.onReceive(context, null)
     }
-
 }

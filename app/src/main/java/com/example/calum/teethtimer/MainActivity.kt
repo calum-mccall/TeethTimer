@@ -78,9 +78,4 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
-    fun setAlarm(view: View) {
-        var setAlarm = SetAlarm()
-        setAlarm.setAlarm(this)
-    }
 }
