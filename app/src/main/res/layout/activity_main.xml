@@ -35,17 +35,31 @@
             tools:text="@string/timer_value" />
 
         <Button
-            android:id="@+id/button_start"
+            android:id="@+id/button_start_pause"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
-            android:onClick="startTimer"
+            android:onClick="startOrPause"
             android:text="Start"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_timer" />
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="resetTimer"
+            android:text="Reset"
+            android:enabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_start_pause" />
 
         <Button
             android:id="@+id/button_time_picker"
@@ -53,12 +67,12 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="64dp"
-            android:text="Show Time Picker"
+            android:layout_marginTop="8dp"
             android:onClick="showTimePickerDialog"
+            android:text="Show Time Picker"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_start" />
+            app:layout_constraintTop_toBottomOf="@+id/button_reset" />
 
         <nl.dionsegijn.konfetti.KonfettiView
             android:id="@+id/viewKonfetti"

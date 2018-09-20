@@ -1,16 +1,11 @@
 package com.example.calum.teethtimer
 
-import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.support.v4.app.DialogFragment
-import android.support.v4.app.FragmentTransaction
-import android.view.Menu
 import android.view.View
 import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +15,14 @@ class MainActivity : AppCompatActivity() {
     var waveHelper = WaveHelper(null)
 
     var notifications = Notifications(this)
+
+    var timerRunning = false
+    var isPaused = false
+
+    val millisInFuture:Long = 120000
+    val countDownInterval:Long = 1000
+
+    var resumeFromMillis:Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,28 +34,33 @@ class MainActivity : AppCompatActivity() {
     //Creates timer, the time it will last and the time between intervals
     fun timer(millisInFuture:Long, countDownInterval:Long):CountDownTimer {
         return object: CountDownTimer(millisInFuture, countDownInterval){
-            //Callback on interval time
             override fun onTick(millisInFuture: Long) {
-
-                //Display the remaining time as minutes:seconds
-                //val remainingTime = millisInFuture/1000
 
                 var millisInFuture:Long = millisInFuture
 
-                //Convert the remaining time into minutes:seconds
-                val remainingMinutes = TimeUnit.MILLISECONDS.toMinutes(millisInFuture)
-                millisInFuture -= TimeUnit.MINUTES.toMillis(remainingMinutes)
-                val remainingSeconds = TimeUnit.MILLISECONDS.toSeconds(millisInFuture)
+                if (isPaused) {
+                    textView_timer.text = "Paused"
+                    button_start_pause.text = "Resume"
+                    button_reset.isEnabled = true
+                    resumeFromMillis = millisInFuture
+                    cancel()
+                } else {
+                    //Convert the remaining time into minutes:seconds
+                    val remainingMinutes = TimeUnit.MILLISECONDS.toMinutes(millisInFuture)
+                    millisInFuture -= TimeUnit.MINUTES.toMillis(remainingMinutes)
+                    val remainingSeconds = TimeUnit.MILLISECONDS.toSeconds(millisInFuture)
 
-                textView_timer.text = String.format("%01d:%02d",remainingMinutes, remainingSeconds)
-                //textView_timer.text = (remainingMinutes).toString() + ":" + (remainingSeconds).toString()
+                    textView_timer.text = String.format("%01d:%02d", remainingMinutes, remainingSeconds)
+                    //textView_timer.text = (remainingMinutes).toString() + ":" + (remainingSeconds).toString()
+                }
             }
 
             //Once the timer finishes
             override fun onFinish() {
                 textView_timer.text = "Finished"
-                button_start.isEnabled = true
                 getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
+                resumeFromMillis = 0
 
                 waveHelper.cancel()
 
@@ -61,19 +69,58 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    //When user clicks start button
+    fun startOrPause(view: View) {
+        if (!timerRunning && !isPaused) {
+            startTimer(view)
+        } else if (!isPaused) {
+            pauseTimer(view)
+        } else {
+            resumeTimer(view)
+        }
+    }
+
     fun startTimer(view: View) {
-        timer(millisInFuture = (1000 * 120), countDownInterval = 1000).start()
-        button_start.isEnabled = false
+        timer(millisInFuture, countDownInterval).start()
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
+        timerRunning = true
+        isPaused = false
+        button_start_pause.text = "Pause"
+
         waveHelper.start()
+    }
+
+    fun pauseTimer(view: View) {
+        isPaused = true
+        timerRunning = false
+        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
+        waveHelper.cancel()
+    }
+
+    fun resumeTimer(view: View) {
+        timer(resumeFromMillis, countDownInterval).start()
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
+        timerRunning = true
+        isPaused = false
+        button_start_pause.text = "Pause"
+        button_reset.isEnabled = false
+
+        waveHelper.start()
+    }
+
+    fun resetTimer(view: View) {
+        timerRunning = false
+        isPaused = false
+        textView_timer.text = ""
+        resumeFromMillis = 0
+        button_start_pause.text = "Start"
+        button_reset.isEnabled = false
     }
 
     fun showTimePickerDialog(view: View) {
         var timePickerFragment = TimePickerFragment()
         timePickerFragment.show(supportFragmentManager, "timePicker")
-
-
     }
 }
