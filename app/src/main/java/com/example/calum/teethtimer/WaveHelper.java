@@ -15,10 +15,12 @@ import java.util.List;
 
 public class WaveHelper {
     private WaveView mWaveView;
+    private long mTimerDuration;
     private AnimatorSet mAnimatorSet;
 
-    public WaveHelper(WaveView waveView) {
+    public WaveHelper(WaveView waveView, Long timerDuration) {
         mWaveView = waveView;
+        mTimerDuration = timerDuration;
         initAnimation();
     }
 
@@ -44,7 +46,7 @@ public class WaveHelper {
 
         ObjectAnimator waterLevelAnim = ObjectAnimator.ofFloat(
                 mWaveView, "waterLevelRatio", 0f, 1.01f);
-        waterLevelAnim.setDuration(120000);
+        waterLevelAnim.setDuration(mTimerDuration);
         waterLevelAnim.setInterpolator(new LinearInterpolator());
         animators.add(waterLevelAnim);
 

@@ -10,25 +10,26 @@ import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
+    val millisInFuture:Long = 120000
+    val countDownInterval:Long = 1000
+
+    var resumeFromMillis:Long = 0
+
     var confettiSelector = ConfettiTypes()
 
-    var waveHelper = WaveHelper(null)
+    //var waveDuration = millisInFuture
+    //var waveHelper = WaveHelper(null, waveDuration)
 
     var notifications = Notifications(this)
 
     var timerRunning = false
     var isPaused = false
 
-    val millisInFuture:Long = 120000
-    val countDownInterval:Long = 1000
-
-    var resumeFromMillis:Long = 0
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        waveHelper = WaveHelper(wave)
+        //waveHelper = WaveHelper(wave, waveDuration)
     }
 
     //Creates timer, the time it will last and the time between intervals
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                     button_start_pause.text = "Resume"
                     button_reset.isEnabled = true
                     resumeFromMillis = millisInFuture
+                    //waveDuration = resumeFromMillis
                     cancel()
                 } else {
                     //Convert the remaining time into minutes:seconds
@@ -62,7 +64,7 @@ class MainActivity : AppCompatActivity() {
 
                 resumeFromMillis = 0
 
-                waveHelper.cancel()
+                //waveHelper.cancel()
 
                 confettiSelector.firstTimeConfetti(viewKonfetti)
             }
@@ -87,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         isPaused = false
         button_start_pause.text = "Pause"
 
-        waveHelper.start()
+        //waveHelper.start()
     }
 
     fun pauseTimer(view: View) {
@@ -95,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         timerRunning = false
         window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
-        waveHelper.cancel()
+        //waveHelper.cancel()
     }
 
     fun resumeTimer(view: View) {
@@ -107,7 +109,7 @@ class MainActivity : AppCompatActivity() {
         button_start_pause.text = "Pause"
         button_reset.isEnabled = false
 
-        waveHelper.start()
+        //waveHelper.start()
     }
 
     fun resetTimer(view: View) {
