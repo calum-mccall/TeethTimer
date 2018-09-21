@@ -33,10 +33,14 @@ class SetAlarm {
             }
         }
 
+        val now: Calendar = Calendar.getInstance()
         val calendar: Calendar = Calendar.getInstance().apply {
             timeInMillis = System.currentTimeMillis()
             set(Calendar.HOUR_OF_DAY, hour)
             set(Calendar.MINUTE, minute)
+        }
+        if (calendar.before(now)) {
+            calendar.timeInMillis += 86400000L
         }
 
         alarmMgr?.setInexactRepeating(
