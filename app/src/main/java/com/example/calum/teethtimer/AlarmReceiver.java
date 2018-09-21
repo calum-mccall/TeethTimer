@@ -14,11 +14,11 @@ public class AlarmReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        Log.i(TAG, "Showing alarmed notification");
+        Log.i(TAG, "Showing alarmed notification ");
 
         Notifications notifications = new Notifications(context);
 
-        notifications.createNotification("Teeth Timer", "Time to brush your teeth.");
+        notifications.createNotification("Teeth Timer", "Time to brush your teeth. ");
     }
 
 }

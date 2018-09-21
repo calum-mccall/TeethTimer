@@ -2,6 +2,7 @@ package com.example.calum.teethtimer;
 
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.widget.TimePicker;
@@ -22,6 +23,7 @@ public class TimePickerFragment extends DialogFragment
 
     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
         SetAlarm setAlarm = new SetAlarm();
-        setAlarm.setAlarm(getContext(), hourOfDay, minute);
+        String morningOrEvening = getTag();
+        setAlarm.setAlarm(getContext(), hourOfDay, minute, morningOrEvening);
     }
 }

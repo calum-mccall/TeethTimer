@@ -2,4 +2,6 @@
     <string name="app_name">Teeth Timer</string>
     <string name="timer_value">2:00</string>
     <string name="sample_action">Set Alarm</string>
+    <string name="morning_time_picker">Morning</string>
+    <string name="evening_time_picker">Evening</string>
 </resources>

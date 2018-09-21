@@ -3,6 +3,7 @@ package com.example.calum.teethtimer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_main.*
@@ -119,6 +120,22 @@ class MainActivity : AppCompatActivity() {
         resumeFromMillis = 0
         button_start_pause.text = "Start"
         button_reset.isEnabled = false
+    }
+
+    fun setMorningAlarm(view: View) {
+        var TAG = "MainActivity"
+
+        var morningTimePickerFragment = TimePickerFragment()
+        morningTimePickerFragment.show(supportFragmentManager, getString(R.string.morning_time_picker))
+        Log.i(TAG, "Showing timePicker for morning alarm")
+    }
+
+    fun setEveningAlarm(view: View) {
+        var TAG = "MainActivity"
+
+        var eveningTimePickerFragment = TimePickerFragment()
+        eveningTimePickerFragment.show(supportFragmentManager, getString(R.string.evening_time_picker))
+        Log.i(TAG, "Showing timePicker for evening alarm")
     }
 
     fun showTimePickerDialog(view: View) {

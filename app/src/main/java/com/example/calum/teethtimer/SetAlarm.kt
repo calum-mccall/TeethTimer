@@ -13,15 +13,24 @@ import java.util.*
 
 class SetAlarm {
 
-    var REQUEST_CODE = 2
+    val MORNING_REQUEST_CODE = 505
+    val EVENING_REQUEST_CODE = 606
 
     private var alarmMgr: AlarmManager? = null
     private lateinit var alarmIntent: PendingIntent
 
-    fun setAlarm(context: Context, hour: Int, minute: Int) {
-        alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
-            PendingIntent.getBroadcast(context, REQUEST_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+    fun setAlarm(context: Context, hour: Int, minute: Int, morningOrEvening: String) {
+
+        if (morningOrEvening == "Morning") {
+            alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+            alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
+                PendingIntent.getBroadcast(context, MORNING_REQUEST_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+            }
+        } else if (morningOrEvening == "Evening") {
+            alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+            alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
+                PendingIntent.getBroadcast(context, EVENING_REQUEST_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+            }
         }
 
         val calendar: Calendar = Calendar.getInstance().apply {
@@ -37,7 +46,7 @@ class SetAlarm {
                 alarmIntent
         )
 
-        Toast.makeText(context, "Alarm set", Toast.LENGTH_SHORT).show()
-        Log.i(TAG, "Alarm set for: " + hour + ":" + minute)
+        Toast.makeText(context, morningOrEvening + " Alarm set", Toast.LENGTH_SHORT).show()
+        Log.i(TAG, morningOrEvening + " Alarm set for: " + hour + ":" + minute)
     }
 }
