@@ -18,9 +18,6 @@ class MainActivity : AppCompatActivity() {
 
     var confettiSelector = ConfettiTypes()
 
-    //var waveDuration = millisInFuture
-    //var waveHelper = WaveHelper(null, waveDuration)
-
     var notifications = Notifications(this)
 
     var timerRunning = false
@@ -30,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //waveHelper = WaveHelper(wave, waveDuration)
     }
 
     //Creates timer, the time it will last and the time between intervals
@@ -45,7 +41,6 @@ class MainActivity : AppCompatActivity() {
                     button_start_pause.text = "Resume"
                     button_reset.isEnabled = true
                     resumeFromMillis = millisInFuture
-                    //waveDuration = resumeFromMillis
                     cancel()
                 } else {
                     //Convert the remaining time into minutes:seconds
@@ -64,8 +59,6 @@ class MainActivity : AppCompatActivity() {
                 getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
                 resumeFromMillis = 0
-
-                //waveHelper.cancel()
 
                 confettiSelector.firstTimeConfetti(viewKonfetti)
             }
@@ -90,7 +83,6 @@ class MainActivity : AppCompatActivity() {
         isPaused = false
         button_start_pause.text = "Pause"
 
-        //waveHelper.start()
     }
 
     fun pauseTimer(view: View) {
@@ -98,7 +90,6 @@ class MainActivity : AppCompatActivity() {
         timerRunning = false
         window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
-        //waveHelper.cancel()
     }
 
     fun resumeTimer(view: View) {
@@ -110,7 +101,6 @@ class MainActivity : AppCompatActivity() {
         button_start_pause.text = "Pause"
         button_reset.isEnabled = false
 
-        //waveHelper.start()
     }
 
     fun resetTimer(view: View) {

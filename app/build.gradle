@@ -32,6 +32,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //Konfetti library from - https://github.com/DanielMartinus/Konfetti
     implementation 'nl.dionsegijn:konfetti:1.1.2'
-    //WaveView library from - https://github.com/gelitenight/WaveView
-    implementation 'com.gelitenight.waveview:waveview:1.0.0'
 }

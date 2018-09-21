@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="355dp">
-
-        <com.gelitenight.waveview.library.WaveView
-            android:id="@+id/wave"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true" />
-
         <TextView
             android:id="@+id/textView_timer"
             android:layout_width="wrap_content"
@@ -91,7 +79,5 @@
             android:id="@+id/viewKonfetti"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-
-    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
