@@ -24,12 +24,12 @@ class SetAlarm {
         if (morningOrEvening == "Morning") {
             alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
-                PendingIntent.getBroadcast(context, MORNING_REQUEST_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+                PendingIntent.getBroadcast(context, MORNING_REQUEST_CODE, intent.putExtra("timeOfAlarm", "Morning"), PendingIntent.FLAG_UPDATE_CURRENT)
             }
         } else if (morningOrEvening == "Evening") {
             alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
-                PendingIntent.getBroadcast(context, EVENING_REQUEST_CODE, intent, PendingIntent.FLAG_UPDATE_CURRENT)
+                PendingIntent.getBroadcast(context, EVENING_REQUEST_CODE, intent.putExtra("timeOfAlarm", "Evening"), PendingIntent.FLAG_UPDATE_CURRENT)
             }
         }
 

@@ -16,6 +16,8 @@ public class Notifications {
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder;
     public static final String NOTIFICATION_CHANNEL_ID = "10001";
+    public static final String MORNING_CHANNEL_ID = "5005";
+    public static final String EVENING_CHANNEL_ID = "6006";
 
     public Notifications(Context context){
         mContext = context;
@@ -41,7 +43,7 @@ public class Notifications {
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             int importance = NotificationManager.IMPORTANCE_HIGH;
-            NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "NOTIFICATION_CHANNEL_NAME", importance);
+            NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Morning and Evening Alarm", importance);
             notificationChannel.enableLights(true);
             notificationChannel.setLightColor(Color.RED);
             notificationChannel.enableVibration(true);
