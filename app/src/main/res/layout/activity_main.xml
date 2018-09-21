@@ -62,16 +62,27 @@
             app:layout_constraintTop_toBottomOf="@+id/button_start_pause" />
 
         <Button
-            android:id="@+id/button_time_picker"
+            android:id="@+id/button_morning_alarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:onClick="showTimePickerDialog"
-            android:text="Show Time Picker"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Morning Alarm"
+            app:layout_constraintEnd_toEndOf="@+id/button_reset"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_reset" />
+
+        <Button
+            android:id="@+id/button_evening_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Evening Alarm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/button_reset"
             app:layout_constraintTop_toBottomOf="@+id/button_reset" />
 
         <nl.dionsegijn.konfetti.KonfettiView
