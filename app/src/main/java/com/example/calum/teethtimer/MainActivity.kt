@@ -116,9 +116,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun resetTimer(view: View) {
+        waveView.centerTitle = ""
+        waveView.progressValue = 50
         timerRunning = false
         isPaused = false
-        waveView.centerTitle = ""
         //waveLoadingView.centerTitle = ""
         //textView_timer.text = ""
         resumeFromMillis = 0

@@ -15,19 +15,19 @@
         app:layout_constraintEnd_toEndOf="@+id/button_start_pause"
         app:layout_constraintStart_toStartOf="@+id/button_start_pause"
         app:layout_constraintTop_toTopOf="@+id/viewKonfetti"
-        app:wlv_borderColor="@color/colorAccent"
+        app:wlv_borderColor="@color/colorPrimaryDark"
         app:wlv_borderWidth="3dp"
         app:wlv_progressValue="40"
         app:wlv_round_rectangle="true"
         app:wlv_shapeType="circle"
         app:wlv_titleCenter="2:00"
-        app:wlv_titleCenterColor="@android:color/white"
+        app:wlv_titleCenterColor="@color/colorAccent"
         app:wlv_titleCenterSize="24sp"
-        app:wlv_titleCenterStrokeColor="@android:color/holo_blue_dark"
+        app:wlv_titleCenterStrokeColor="@color/colorPrimaryDark"
         app:wlv_titleCenterStrokeWidth="3dp"
         app:wlv_triangle_direction="north"
         app:wlv_waveAmplitude="70"
-        app:wlv_waveColor="@color/colorAccent" />
+        app:wlv_waveColor="@color/colorPrimaryDark" />
 
     <Button
         android:id="@+id/button_start_pause"
