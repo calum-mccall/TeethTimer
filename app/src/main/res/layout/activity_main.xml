@@ -7,38 +7,27 @@
     tools:context=".MainActivity">
 
     <me.itangqi.waveloadingview.WaveLoadingView
-        android:id="@+id/waveLoadingView"
+        android:id="@+id/waveView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/button_start_pause"
+        app:layout_constraintStart_toStartOf="@+id/button_start_pause"
+        app:layout_constraintTop_toTopOf="@+id/viewKonfetti"
         app:wlv_borderColor="@color/colorAccent"
         app:wlv_borderWidth="3dp"
         app:wlv_progressValue="40"
-        app:wlv_shapeType="circle"
         app:wlv_round_rectangle="true"
-        app:wlv_triangle_direction="north"
-        app:wlv_titleCenterStrokeColor="@color/colorPrimary"
-        app:wlv_titleBottomStrokeWidth="3dp"
-        app:wlv_titleCenter="Center Title"
+        app:wlv_shapeType="circle"
+        app:wlv_titleCenter="2:00"
         app:wlv_titleCenterColor="@android:color/white"
         app:wlv_titleCenterSize="24sp"
+        app:wlv_titleCenterStrokeColor="@android:color/holo_blue_dark"
+        app:wlv_titleCenterStrokeWidth="3dp"
+        app:wlv_triangle_direction="north"
         app:wlv_waveAmplitude="70"
-        app:wlv_waveColor="@color/colorAccent"/>
-
-    <TextView
-        android:id="@+id/textView_timer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:textSize="70sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"
-        tools:text="@string/timer_value" />
+        app:wlv_waveColor="@color/colorAccent" />
 
     <Button
         android:id="@+id/button_start_pause"
@@ -46,12 +35,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:onClick="startOrPause"
         android:text="Start"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_timer" />
+        app:layout_constraintTop_toBottomOf="@+id/waveView" />
 
     <Button
         android:id="@+id/button_reset"

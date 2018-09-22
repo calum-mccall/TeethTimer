@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_main.*
+import me.itangqi.waveloadingview.WaveLoadingView
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
@@ -26,7 +27,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
     }
 
     //Creates timer, the time it will last and the time between intervals
@@ -37,7 +37,9 @@ class MainActivity : AppCompatActivity() {
                 var millisInFuture:Long = millisInFuture
 
                 if (isPaused) {
-                    textView_timer.text = "Paused"
+                    waveView.centerTitle = "Paused"
+                    //waveLoadingView.centerTitle = "Pause"
+                    //textView_timer.text = "Paused"
                     button_start_pause.text = "Resume"
                     button_reset.isEnabled = true
                     resumeFromMillis = millisInFuture
@@ -48,19 +50,25 @@ class MainActivity : AppCompatActivity() {
                     millisInFuture -= TimeUnit.MINUTES.toMillis(remainingMinutes)
                     val remainingSeconds = TimeUnit.MILLISECONDS.toSeconds(millisInFuture)
 
-                    textView_timer.text = String.format("%01d:%02d", remainingMinutes, remainingSeconds)
+                    waveView.centerTitle = String.format("%01d:%02d", remainingMinutes, remainingSeconds)
+                    waveView.progressValue += 1
+                    //textView_timer.text = String.format("%01d:%02d", remainingMinutes, remainingSeconds)
                     //textView_timer.text = (remainingMinutes).toString() + ":" + (remainingSeconds).toString()
                 }
             }
 
             //Once the timer finishes
             override fun onFinish() {
-                textView_timer.text = "Finished"
+                waveView.centerTitle = "Finished"
+                //waveLoadingView.centerTitle = "Finished"
+                //textView_timer.text = "Finished"
                 getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
                 resumeFromMillis = 0
 
                 confettiSelector.firstTimeConfetti(viewKonfetti)
+
+                waveView.endAnimation()
             }
         }
     }
@@ -83,6 +91,8 @@ class MainActivity : AppCompatActivity() {
         isPaused = false
         button_start_pause.text = "Pause"
 
+        waveView.startAnimation()
+        waveView.progressValue = 0
     }
 
     fun pauseTimer(view: View) {
@@ -90,6 +100,7 @@ class MainActivity : AppCompatActivity() {
         timerRunning = false
         window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
+        waveView.pauseAnimation()
     }
 
     fun resumeTimer(view: View) {
@@ -101,12 +112,15 @@ class MainActivity : AppCompatActivity() {
         button_start_pause.text = "Pause"
         button_reset.isEnabled = false
 
+        waveView.resumeAnimation()
     }
 
     fun resetTimer(view: View) {
         timerRunning = false
         isPaused = false
-        textView_timer.text = ""
+        waveView.centerTitle = ""
+        //waveLoadingView.centerTitle = ""
+        //textView_timer.text = ""
         resumeFromMillis = 0
         button_start_pause.text = "Start"
         button_reset.isEnabled = false
