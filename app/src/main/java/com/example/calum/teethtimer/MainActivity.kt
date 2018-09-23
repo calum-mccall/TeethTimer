@@ -1,5 +1,6 @@
 package com.example.calum.teethtimer
 
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity() {
 
     var timerRunning = false
     var isPaused = false
+
+    val TAG = "Main Activity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,6 +55,7 @@ class MainActivity : AppCompatActivity() {
 
                     waveView.centerTitle = String.format("%01d:%02d", remainingMinutes, remainingSeconds)
                     waveView.progressValue += 1
+                    Log.i(TAG, "Wave is at progress value " + waveView.progressValue)
                     //textView_timer.text = String.format("%01d:%02d", remainingMinutes, remainingSeconds)
                     //textView_timer.text = (remainingMinutes).toString() + ":" + (remainingSeconds).toString()
                 }
@@ -69,6 +73,8 @@ class MainActivity : AppCompatActivity() {
                 confettiSelector.firstTimeConfetti(viewKonfetti)
 
                 waveView.endAnimation()
+
+                button_reset.isEnabled = true
             }
         }
     }
@@ -92,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         button_start_pause.text = "Pause"
 
         waveView.startAnimation()
-        waveView.progressValue = 0
+        waveView.progressValue = -5
     }
 
     fun pauseTimer(view: View) {
@@ -128,16 +134,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun setMorningAlarm(view: View) {
-        var TAG = "MainActivity"
-
         var morningTimePickerFragment = TimePickerFragment()
         morningTimePickerFragment.show(supportFragmentManager, getString(R.string.morning_time_picker))
         Log.i(TAG, "Showing timePicker for morning alarm")
     }
 
     fun setEveningAlarm(view: View) {
-        var TAG = "MainActivity"
-
         var eveningTimePickerFragment = TimePickerFragment()
         eveningTimePickerFragment.show(supportFragmentManager, getString(R.string.evening_time_picker))
         Log.i(TAG, "Showing timePicker for evening alarm")
