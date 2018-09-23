@@ -39,6 +39,10 @@ class MainActivity : AppCompatActivity() {
 
                 var millisInFuture:Long = millisInFuture
 
+                if (millisInFuture < 10000 && millisInFuture > 9000) {
+                    waveView.centerTitleSize += 4
+                }
+
                 if (isPaused) {
                     waveView.centerTitle = "Paused"
                     //waveLoadingView.centerTitle = "Pause"
@@ -56,6 +60,11 @@ class MainActivity : AppCompatActivity() {
                     waveView.centerTitle = String.format("%01d:%02d", remainingMinutes, remainingSeconds)
                     waveView.progressValue += 1
                     Log.i(TAG, "Wave is at progress value " + waveView.progressValue)
+
+                    if (remainingMinutes < 1 && remainingSeconds < 10) {
+                        waveView.centerTitle = String.format("%01d", remainingSeconds)
+                        //waveView.centerTitleSize += 1
+                    }
                     //textView_timer.text = String.format("%01d:%02d", remainingMinutes, remainingSeconds)
                     //textView_timer.text = (remainingMinutes).toString() + ":" + (remainingSeconds).toString()
                 }
