@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
         button_start_pause.text = "Pause"
 
         waveView.startAnimation()
-        waveView.progressValue = -5
+        waveView.progressValue = -10
     }
 
     fun pauseTimer(view: View) {
@@ -124,6 +124,7 @@ class MainActivity : AppCompatActivity() {
     fun resetTimer(view: View) {
         waveView.centerTitle = ""
         waveView.progressValue = 50
+        waveView.startAnimation()
         timerRunning = false
         isPaused = false
         //waveLoadingView.centerTitle = ""
