@@ -90,7 +90,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/morning_alarm_time"
         app:layout_constraintEnd_toEndOf="@+id/button_morning_alarm"
         app:layout_constraintStart_toStartOf="@+id/button_morning_alarm"
         app:layout_constraintTop_toBottomOf="@+id/button_morning_alarm" />
@@ -102,7 +102,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:text="@string/evening_alarm_time"
         app:layout_constraintEnd_toEndOf="@+id/button_evening_alarm"
         app:layout_constraintStart_toStartOf="@+id/button_evening_alarm"
         app:layout_constraintTop_toBottomOf="@+id/button_evening_alarm" />

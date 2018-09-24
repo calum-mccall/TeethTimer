@@ -1,6 +1,7 @@
 package com.example.calum.teethtimer
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -27,9 +28,15 @@ class MainActivity : AppCompatActivity() {
 
     val TAG = "Main Activity"
 
+    var morningAlarm = ""
+    var eveningAlarm = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val sharedPreferences = this.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
+        showSetAlarms(sharedPreferences)
     }
 
     //Creates timer, the time it will last and the time between intervals
@@ -155,8 +162,8 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG, "Showing timePicker for evening alarm")
     }
 
-    fun showTimePickerDialog(view: View) {
-        var timePickerFragment = TimePickerFragment()
-        timePickerFragment.show(supportFragmentManager, "timePicker")
+    fun showSetAlarms(sharedPreferences: SharedPreferences) {
+        textView_morning_alarm.text = sharedPreferences.getString(R.string.morning_alarm_time.toString(), morningAlarm)
+        textView_evening_alarm.text = sharedPreferences.getString(R.string.evening_alarm_time.toString(), eveningAlarm)
     }
 }
