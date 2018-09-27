@@ -10,11 +10,11 @@
         android:id="@+id/waveView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/button_evening_alarm"
-        app:layout_constraintStart_toStartOf="@+id/button_morning_alarm"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/viewKonfetti"
+        app:layout_constraintStart_toStartOf="@+id/viewKonfetti"
         app:layout_constraintTop_toTopOf="@+id/viewKonfetti"
         app:wlv_borderColor="@color/colorPrimaryDark"
         app:wlv_borderWidth="3dp"
@@ -34,78 +34,34 @@
         android:id="@+id/button_start_pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:onClick="startOrPause"
         android:text="Start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/waveView"
+        app:layout_constraintStart_toStartOf="@+id/waveView"
         app:layout_constraintTop_toBottomOf="@+id/waveView" />
 
     <Button
         android:id="@+id/button_reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:enabled="false"
         android:onClick="resetTimer"
         android:text="Reset"
-        android:enabled="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_start_pause"
+        app:layout_constraintStart_toStartOf="@+id/button_start_pause"
         app:layout_constraintTop_toBottomOf="@+id/button_start_pause" />
 
     <Button
-        android:id="@+id/button_morning_alarm"
+        android:id="@+id/button_alarm_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Morning Alarm"
-        android:onClick="setMorningAlarm"
+        android:text="Alarms"
         app:layout_constraintEnd_toEndOf="@+id/button_reset"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_reset" />
-
-    <Button
-        android:id="@+id/button_evening_alarm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Evening Alarm"
-        android:onClick="setEveningAlarm"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/button_reset"
         app:layout_constraintTop_toBottomOf="@+id/button_reset" />
-
-    <TextView
-        android:id="@+id/textView_morning_alarm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/morning_alarm_time"
-        app:layout_constraintEnd_toEndOf="@+id/button_morning_alarm"
-        app:layout_constraintStart_toStartOf="@+id/button_morning_alarm"
-        app:layout_constraintTop_toBottomOf="@+id/button_morning_alarm" />
-
-    <TextView
-        android:id="@+id/textView_evening_alarm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/evening_alarm_time"
-        app:layout_constraintEnd_toEndOf="@+id/button_evening_alarm"
-        app:layout_constraintStart_toStartOf="@+id/button_evening_alarm"
-        app:layout_constraintTop_toBottomOf="@+id/button_evening_alarm" />
 
     <nl.dionsegijn.konfetti.KonfettiView
         android:id="@+id/viewKonfetti"
