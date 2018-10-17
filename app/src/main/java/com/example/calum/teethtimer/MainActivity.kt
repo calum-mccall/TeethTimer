@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val sharedPreferences = this.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
-        showSetAlarms(sharedPreferences)
+        //showSetAlarms(sharedPreferences)
     }
 
     //Creates timer, the time it will last and the time between intervals
@@ -162,8 +162,8 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG, "Showing timePicker for evening alarm")
     }
 
-    fun showSetAlarms(sharedPreferences: SharedPreferences) {
+    /*fun showSetAlarms(sharedPreferences: SharedPreferences) {
         textView_morning_alarm.text = sharedPreferences.getString(R.string.morning_alarm_time.toString(), morningAlarm)
         textView_evening_alarm.text = sharedPreferences.getString(R.string.evening_alarm_time.toString(), eveningAlarm)
-    }
+    }*/
 }
