@@ -1,6 +1,7 @@
 package com.example.calum.teethtimer
 
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -166,4 +167,9 @@ class MainActivity : AppCompatActivity() {
         textView_morning_alarm.text = sharedPreferences.getString(R.string.morning_alarm_time.toString(), morningAlarm)
         textView_evening_alarm.text = sharedPreferences.getString(R.string.evening_alarm_time.toString(), eveningAlarm)
     }*/
+
+    fun showAlarms(view: View) {
+        val intent = Intent(this, AlarmsActivity::class.java)
+        startActivity(intent)
+    }
 }

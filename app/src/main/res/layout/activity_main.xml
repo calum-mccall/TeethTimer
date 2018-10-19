@@ -6,66 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <me.itangqi.waveloadingview.WaveLoadingView
-        android:id="@+id/waveView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/viewKonfetti"
-        app:layout_constraintStart_toStartOf="@+id/viewKonfetti"
-        app:layout_constraintTop_toTopOf="@+id/viewKonfetti"
-        app:wlv_borderColor="@color/colorPrimaryDark"
-        app:wlv_borderWidth="3dp"
-        app:wlv_progressValue="40"
-        app:wlv_round_rectangle="true"
-        app:wlv_shapeType="circle"
-        app:wlv_titleCenter="2:00"
-        app:wlv_titleCenterColor="@color/colorAccent"
-        app:wlv_titleCenterSize="24sp"
-        app:wlv_titleCenterStrokeColor="@color/colorPrimaryDark"
-        app:wlv_titleCenterStrokeWidth="3dp"
-        app:wlv_triangle_direction="north"
-        app:wlv_waveAmplitude="50"
-        app:wlv_waveColor="@color/colorPrimaryDark" />
-
-    <Button
-        android:id="@+id/button_start_pause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:onClick="startOrPause"
-        android:text="Start"
-        app:layout_constraintEnd_toEndOf="@+id/waveView"
-        app:layout_constraintStart_toStartOf="@+id/waveView"
-        app:layout_constraintTop_toBottomOf="@+id/waveView" />
-
-    <Button
-        android:id="@+id/button_reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:enabled="false"
-        android:onClick="resetTimer"
-        android:text="Reset"
-        app:layout_constraintEnd_toEndOf="@+id/button_start_pause"
-        app:layout_constraintStart_toStartOf="@+id/button_start_pause"
-        app:layout_constraintTop_toBottomOf="@+id/button_start_pause" />
-
-    <Button
-        android:id="@+id/button_alarm_fragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Alarms"
-        app:layout_constraintEnd_toEndOf="@+id/button_reset"
-        app:layout_constraintStart_toStartOf="@+id/button_reset"
-        app:layout_constraintTop_toBottomOf="@+id/button_reset" />
-
-    <nl.dionsegijn.konfetti.KonfettiView
-        android:id="@+id/viewKonfetti"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_test">
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="@+id/viewKonfetti"
+            app:layout_constraintStart_toStartOf="@+id/viewKonfetti"
+            app:layout_constraintTop_toTopOf="@+id/viewKonfetti"
+            app:wlv_borderColor="@color/colorPrimaryDark"
+            app:wlv_borderWidth="3dp"
+            app:wlv_progressValue="40"
+            app:wlv_round_rectangle="true"
+            app:wlv_shapeType="circle"
+            app:wlv_titleCenter="2:00"
+            app:wlv_titleCenterColor="@color/colorAccent"
+            app:wlv_titleCenterSize="24sp"
+            app:wlv_titleCenterStrokeColor="@color/colorPrimaryDark"
+            app:wlv_titleCenterStrokeWidth="3dp"
+            app:wlv_triangle_direction="north"
+            app:wlv_waveAmplitude="50"
+            app:wlv_waveColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/button_start_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="startOrPause"
+            android:text="Start"
+            app:layout_constraintEnd_toEndOf="@+id/waveView"
+            app:layout_constraintStart_toStartOf="@+id/waveView"
+            app:layout_constraintTop_toBottomOf="@+id/waveView" />
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:enabled="false"
+            android:onClick="resetTimer"
+            android:text="Reset"
+            app:layout_constraintEnd_toEndOf="@+id/button_start_pause"
+            app:layout_constraintStart_toStartOf="@+id/button_start_pause"
+            app:layout_constraintTop_toBottomOf="@+id/button_start_pause" />
+
+        <Button
+            android:id="@+id/button_alarm_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="showAlarms"
+            android:text="Alarms"
+            app:layout_constraintEnd_toEndOf="@+id/button_reset"
+            app:layout_constraintStart_toStartOf="@+id/button_reset"
+            app:layout_constraintTop_toBottomOf="@+id/button_reset" />
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/viewKonfetti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
