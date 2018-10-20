@@ -151,18 +151,6 @@ class MainActivity : AppCompatActivity() {
         button_reset.isEnabled = false
     }
 
-    fun setMorningAlarm(view: View) {
-        var morningTimePickerFragment = TimePickerFragment()
-        morningTimePickerFragment.show(supportFragmentManager, getString(R.string.morning_time_picker))
-        Log.i(TAG, "Showing timePicker for morning alarm")
-    }
-
-    fun setEveningAlarm(view: View) {
-        var eveningTimePickerFragment = TimePickerFragment()
-        eveningTimePickerFragment.show(supportFragmentManager, getString(R.string.evening_time_picker))
-        Log.i(TAG, "Showing timePicker for evening alarm")
-    }
-
     /*fun showSetAlarms(sharedPreferences: SharedPreferences) {
         textView_morning_alarm.text = sharedPreferences.getString(R.string.morning_alarm_time.toString(), morningAlarm)
         textView_evening_alarm.text = sharedPreferences.getString(R.string.evening_alarm_time.toString(), eveningAlarm)
