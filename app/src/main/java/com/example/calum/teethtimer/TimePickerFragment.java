@@ -23,5 +23,7 @@ public class TimePickerFragment extends DialogFragment
         SetAlarm setAlarm = new SetAlarm();
         String morningOrEvening = getTag();
         setAlarm.setAlarm(getContext(), hourOfDay, minute, morningOrEvening);
+
+        this.getActivity().finish();
     }
 }
