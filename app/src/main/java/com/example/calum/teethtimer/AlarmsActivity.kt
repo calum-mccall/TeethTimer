@@ -43,5 +43,4 @@ class AlarmsActivity : AppCompatActivity() {
         textView_morning_alarm.text = sharedPreferences.getString(R.string.morning_alarm_time.toString(), morningAlarm)
         textView_evening_alarm.text = sharedPreferences.getString(R.string.evening_alarm_time.toString(), eveningAlarm)
     }
-
 }

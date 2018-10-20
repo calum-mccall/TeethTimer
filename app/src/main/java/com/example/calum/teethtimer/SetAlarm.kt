@@ -57,7 +57,7 @@ class SetAlarm {
                 alarmIntent
         )
 
-        Toast.makeText(context, morningOrEvening + " Alarm set", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, morningOrEvening + " Alarm set for " + alarmTime, Toast.LENGTH_SHORT).show()
         Log.i(TAG, morningOrEvening + " Alarm set for: " + hour + ":" + minute)
     }
 }
