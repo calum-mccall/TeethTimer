@@ -43,4 +43,10 @@ class AlarmsActivity : AppCompatActivity() {
         textView_morning_alarm.text = sharedPreferences.getString(R.string.morning_alarm_time.toString(), morningAlarm)
         textView_evening_alarm.text = sharedPreferences.getString(R.string.evening_alarm_time.toString(), eveningAlarm)
     }
+
+    fun deleteAlarms(view: View) {
+        var deleteAlarmDialog = DeleteAlarmDialogFragment()
+        deleteAlarmDialog.show(fragmentManager, getString(R.string.delete_alarm_dialog))
+        Log.i(TAG, "Showing dialog for deleting alarm")
+    }
 }
