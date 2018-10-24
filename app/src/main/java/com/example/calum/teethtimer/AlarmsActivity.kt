@@ -48,4 +48,10 @@ class AlarmsActivity : AppCompatActivity() {
         deleteMorningAlarmDialog.show(fragmentManager, getString(R.string.delete_morning_alarm_dialog))
         Log.i(TAG, "Showing dialog for deleting morning alarm")
     }
+
+    fun deleteEveningAlarm(view: View) {
+        var deleteEveningAlarmDialog = DeleteAlarmDialogFragment()
+        deleteEveningAlarmDialog.show(fragmentManager, getString(R.string.delete_evening_alarm_dialog))
+        Log.i(TAG, "Showing dialog for deleting evening alarm")
+    }
 }

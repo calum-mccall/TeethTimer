@@ -70,9 +70,13 @@ class SetAlarm {
             alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
                 PendingIntent.getBroadcast(context, MORNING_REQUEST_CODE, intent.putExtra("timeOfAlarm", "Morning"), PendingIntent.FLAG_UPDATE_CURRENT)
             }
-
-            sharedPreferences.edit().remove(R.string.morning_alarm_time.toString())
             sharedPreferences.edit().putString(R.string.morning_alarm_time.toString(), "No Alarm Set").apply()
+        } else if (morningOrEvening == "Evening") {
+            alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+            alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
+                PendingIntent.getBroadcast(context, EVENING_REQUEST_CODE, intent.putExtra("timeOfAlarm", "Evening"), PendingIntent.FLAG_UPDATE_CURRENT)
+            }
+            sharedPreferences.edit().putString(R.string.evening_alarm_time.toString(), "No Alarm Set").apply()
         }
 
         alarmMgr?.cancel(alarmIntent)
