@@ -14,6 +14,9 @@ class DeleteAlarmDialogFragment : DialogFragment() {
             builder.setMessage("Test")
                     .setPositiveButton("Yes", DialogInterface.OnClickListener { dialog, id ->
                         // Positive button
+                        var setAlarm = SetAlarm()
+                        setAlarm.deleteAlarm(context)
+                        this.activity.finish()
                     })
                     .setNegativeButton("No", DialogInterface.OnClickListener { dialog, id ->
                         // Negative button
