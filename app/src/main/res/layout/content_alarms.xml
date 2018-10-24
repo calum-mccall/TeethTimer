@@ -55,25 +55,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:text="@string/evening_alarm_time"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_morning_alarm" />
+            app:layout_constraintTop_toBottomOf="@+id/button_delete_morning_alarm" />
 
         <Button
-            android:id="@+id/button_delete_alarms"
+            android:id="@+id/button_delete_morning_alarm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:onClick="deleteAlarms"
-            android:text="Delete Alarms"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button_evening_alarm" />
+            android:layout_marginTop="8dp"
+            android:onClick="deleteMorningAlarm"
+            android:text="Delete Morning Alarm"
+            app:layout_constraintEnd_toEndOf="@+id/button_morning_alarm"
+            app:layout_constraintStart_toStartOf="@+id/button_morning_alarm"
+            app:layout_constraintTop_toBottomOf="@+id/button_morning_alarm" />
 
     </android.support.constraint.ConstraintLayout>
 

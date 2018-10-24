@@ -3,7 +3,6 @@ package com.example.calum.teethtimer
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log
 import android.view.View
@@ -44,9 +43,9 @@ class AlarmsActivity : AppCompatActivity() {
         textView_evening_alarm.text = sharedPreferences.getString(R.string.evening_alarm_time.toString(), eveningAlarm)
     }
 
-    fun deleteAlarms(view: View) {
-        var deleteAlarmDialog = DeleteAlarmDialogFragment()
-        deleteAlarmDialog.show(fragmentManager, getString(R.string.delete_alarm_dialog))
-        Log.i(TAG, "Showing dialog for deleting alarm")
+    fun deleteMorningAlarm(view: View) {
+        var deleteMorningAlarmDialog = DeleteAlarmDialogFragment()
+        deleteMorningAlarmDialog.show(fragmentManager, getString(R.string.delete_morning_alarm_dialog))
+        Log.i(TAG, "Showing dialog for deleting morning alarm")
     }
 }

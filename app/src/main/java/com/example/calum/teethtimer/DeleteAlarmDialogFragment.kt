@@ -11,11 +11,11 @@ class DeleteAlarmDialogFragment : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
             val builder = AlertDialog.Builder(it)
-            builder.setMessage("Test")
+            builder.setMessage("Delete " + tag + " alarm?")
                     .setPositiveButton("Yes", DialogInterface.OnClickListener { dialog, id ->
                         // Positive button
                         var setAlarm = SetAlarm()
-                        setAlarm.deleteAlarm(context)
+                        setAlarm.deleteAlarm(context, tag)
                         this.activity.finish()
                     })
                     .setNegativeButton("No", DialogInterface.OnClickListener { dialog, id ->
@@ -24,5 +24,4 @@ class DeleteAlarmDialogFragment : DialogFragment() {
                     builder.create()
         } ?: throw IllegalStateException("Activity cannot be null")
     }
-
 }

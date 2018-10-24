@@ -61,20 +61,22 @@ class SetAlarm {
         Log.i(TAG, morningOrEvening + " Alarm set for: " + hour + ":" + minute)
     }
 
-    fun deleteAlarm(context: Context) {
+    fun deleteAlarm(context: Context, morningOrEvening: String) {
 
         val sharedPreferences = context?.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
 
-        alarmMgr =  context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
-            PendingIntent.getBroadcast(context, MORNING_REQUEST_CODE, intent.putExtra("timeOfAlarm", "Morning"), PendingIntent.FLAG_UPDATE_CURRENT)
-        }
+        if (morningOrEvening == "Morning") {
+            alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+            alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
+                PendingIntent.getBroadcast(context, MORNING_REQUEST_CODE, intent.putExtra("timeOfAlarm", "Morning"), PendingIntent.FLAG_UPDATE_CURRENT)
+            }
 
-        sharedPreferences.edit().remove(R.string.morning_alarm_time.toString())
-        sharedPreferences.edit().putString(R.string.morning_alarm_time.toString(), "No Alarm Set").apply()
+            sharedPreferences.edit().remove(R.string.morning_alarm_time.toString())
+            sharedPreferences.edit().putString(R.string.morning_alarm_time.toString(), "No Alarm Set").apply()
+        }
 
         alarmMgr?.cancel(alarmIntent)
 
-        Toast.makeText(context, "Alarm deleted", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, morningOrEvening + " alarm deleted", Toast.LENGTH_SHORT).show()
     }
 }
