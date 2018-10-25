@@ -139,6 +139,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun resetTimer(view: View) {
+        waveView.centerTitleSize = "24".toFloat()
         waveView.centerTitle = ""
         waveView.progressValue = 50
         waveView.startAnimation()
