@@ -41,6 +41,9 @@ class AlarmsActivity : AppCompatActivity() {
     fun showSetAlarms(sharedPreferences: SharedPreferences) {
         textView_morning_alarm.text = sharedPreferences.getString(R.string.morning_alarm_time.toString(), morningAlarm)
         textView_evening_alarm.text = sharedPreferences.getString(R.string.evening_alarm_time.toString(), eveningAlarm)
+
+        button_delete_morning_alarm.isEnabled = sharedPreferences.getBoolean(R.bool.morning_alarm_set.toString(), false)
+        button_delete_evening_alarm.isEnabled = sharedPreferences.getBoolean(R.bool.evening_alarm_set.toString(), false)
     }
 
     fun deleteMorningAlarm(view: View) {

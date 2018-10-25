@@ -32,12 +32,14 @@ class SetAlarm {
                 PendingIntent.getBroadcast(context, MORNING_REQUEST_CODE, intent.putExtra("timeOfAlarm", "Morning"), PendingIntent.FLAG_UPDATE_CURRENT)
             }
             sharedPreferences.edit().putString(R.string.morning_alarm_time.toString(), alarmTime).apply()
+            sharedPreferences.edit().putBoolean(R.bool.morning_alarm_set.toString(), true).apply()
         } else if (morningOrEvening == "Evening") {
             alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
                 PendingIntent.getBroadcast(context, EVENING_REQUEST_CODE, intent.putExtra("timeOfAlarm", "Evening"), PendingIntent.FLAG_UPDATE_CURRENT)
             }
             sharedPreferences.edit().putString(R.string.evening_alarm_time.toString(), alarmTime).apply()
+            sharedPreferences.edit().putBoolean(R.bool.evening_alarm_set.toString(), true).apply()
         }
 
         val now: Calendar = Calendar.getInstance()
@@ -71,12 +73,14 @@ class SetAlarm {
                 PendingIntent.getBroadcast(context, MORNING_REQUEST_CODE, intent.putExtra("timeOfAlarm", "Morning"), PendingIntent.FLAG_UPDATE_CURRENT)
             }
             sharedPreferences.edit().putString(R.string.morning_alarm_time.toString(), "No Alarm Set").apply()
+            sharedPreferences.edit().putBoolean(R.bool.morning_alarm_set.toString(), false).apply()
         } else if (morningOrEvening == "Evening") {
             alarmMgr = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
             alarmIntent = Intent(context, AlarmReceiver::class.java).let { intent ->
                 PendingIntent.getBroadcast(context, EVENING_REQUEST_CODE, intent.putExtra("timeOfAlarm", "Evening"), PendingIntent.FLAG_UPDATE_CURRENT)
             }
             sharedPreferences.edit().putString(R.string.evening_alarm_time.toString(), "No Alarm Set").apply()
+            sharedPreferences.edit().putBoolean(R.bool.evening_alarm_set.toString(), false).apply()
         }
 
         alarmMgr?.cancel(alarmIntent)
