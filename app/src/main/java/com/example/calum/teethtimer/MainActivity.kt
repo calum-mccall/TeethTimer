@@ -91,6 +91,7 @@ class MainActivity : AppCompatActivity() {
 
                 waveView.endAnimation()
 
+                button_start_pause.isEnabled = false
                 button_reset.isEnabled = true
             }
         }
@@ -149,6 +150,7 @@ class MainActivity : AppCompatActivity() {
         //textView_timer.text = ""
         resumeFromMillis = 0
         button_start_pause.text = "Start"
+        button_start_pause.isEnabled = true
         button_reset.isEnabled = false
     }
 
