@@ -37,6 +37,7 @@
 
         <Button
             android:id="@+id/button_start_pause"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -48,6 +49,7 @@
 
         <Button
             android:id="@+id/button_reset"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -60,7 +62,7 @@
 
         <ImageButton
             android:id="@+id/button_alarm_fragment"
-            style="?android:attr/borderlessButtonStyle"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
