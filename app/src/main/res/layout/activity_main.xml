@@ -36,7 +36,7 @@
             app:wlv_waveColor="@color/colorPrimaryDark" />
 
         <Button
-            android:id="@+id/button_start_pause"
+            android:id="@+id/button_start"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,9 +55,9 @@
             android:layout_marginTop="8dp"
             android:onClick="showAlarms"
             android:src="@drawable/ic_alarm_black_24dp"
-            app:layout_constraintEnd_toEndOf="@+id/button_start_pause"
-            app:layout_constraintStart_toStartOf="@+id/button_start_pause"
-            app:layout_constraintTop_toBottomOf="@+id/button_start_pause" />
+            app:layout_constraintEnd_toEndOf="@+id/button_start"
+            app:layout_constraintStart_toStartOf="@+id/button_start"
+            app:layout_constraintTop_toBottomOf="@+id/button_start" />
 
         <ImageButton
             android:id="@+id/button_pause_resume"

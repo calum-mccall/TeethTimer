@@ -2,7 +2,6 @@ package com.example.calum.teethtimer
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -10,7 +9,6 @@ import android.util.Log
 import android.view.View
 import android.view.WindowManager
 import kotlinx.android.synthetic.main.activity_main.*
-import me.itangqi.waveloadingview.WaveLoadingView
 import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
@@ -55,7 +53,7 @@ class MainActivity : AppCompatActivity() {
                     waveView.centerTitle = "Paused"
                     //waveLoadingView.centerTitle = "Pause"
                     //textView_timer.text = "Paused"
-                    button_start_pause.text = "Resume"
+                    button_start.text = "Resume"
                     button_reset.isEnabled = true
                     resumeFromMillis = millisInFuture
                     cancel()
@@ -91,7 +89,7 @@ class MainActivity : AppCompatActivity() {
 
                 waveView.endAnimation()
 
-                button_start_pause.isEnabled = false
+                button_start.isEnabled = false
                 button_reset.isEnabled = true
             }
         }
@@ -113,7 +111,12 @@ class MainActivity : AppCompatActivity() {
 
         timerRunning = true
         isPaused = false
-        button_start_pause.text = "Pause"
+        //button_start_pause.text = "Pause"
+
+        button_start.visibility = View.INVISIBLE
+        button_alarm_fragment.visibility = View.INVISIBLE
+        button_pause_resume.visibility = View.VISIBLE
+        button_reset.visibility = View.VISIBLE
 
         waveView.startAnimation()
         waveView.progressValue = -10
@@ -133,7 +136,7 @@ class MainActivity : AppCompatActivity() {
 
         timerRunning = true
         isPaused = false
-        button_start_pause.text = "Pause"
+        button_start.text = "Pause"
         button_reset.isEnabled = false
 
         waveView.resumeAnimation()
@@ -149,8 +152,8 @@ class MainActivity : AppCompatActivity() {
         //waveLoadingView.centerTitle = ""
         //textView_timer.text = ""
         resumeFromMillis = 0
-        button_start_pause.text = "Start"
-        button_start_pause.isEnabled = true
+        button_start.text = "Start"
+        button_start.isEnabled = true
         button_reset.isEnabled = false
     }
 
