@@ -47,6 +47,18 @@
             app:layout_constraintStart_toStartOf="@+id/waveView"
             app:layout_constraintTop_toBottomOf="@+id/waveView" />
 
+        <ImageButton
+            android:id="@+id/button_alarm_fragment"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:onClick="showAlarms"
+            android:src="@drawable/ic_alarm_black_24dp"
+            app:layout_constraintEnd_toEndOf="@+id/button_reset"
+            app:layout_constraintStart_toStartOf="@+id/button_reset"
+            app:layout_constraintTop_toBottomOf="@+id/button_reset" />
+
         <Button
             android:id="@+id/button_reset"
             style="@style/Widget.AppCompat.Button.Colored"
@@ -61,16 +73,11 @@
             app:layout_constraintTop_toBottomOf="@+id/button_start_pause" />
 
         <ImageButton
-            android:id="@+id/button_alarm_fragment"
+            android:id="@+id/button_pause_resume"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:onClick="showAlarms"
-            android:src="@drawable/ic_alarm_black_24dp"
-            app:layout_constraintEnd_toEndOf="@+id/button_reset"
-            app:layout_constraintStart_toStartOf="@+id/button_reset"
-            app:layout_constraintTop_toBottomOf="@+id/button_reset" />
+            android:src="@drawable/ic_pause_black_24dp"/>
 
         <nl.dionsegijn.konfetti.KonfettiView
             android:id="@+id/viewKonfetti"
