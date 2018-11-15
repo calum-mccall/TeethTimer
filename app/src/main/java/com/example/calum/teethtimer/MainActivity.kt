@@ -128,6 +128,8 @@ class MainActivity : AppCompatActivity() {
         window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         waveView.pauseAnimation()
+
+        button_pause_resume.setImageResource(R.drawable.ic_play_arrow_black_24dp)
     }
 
     fun resumeTimer(view: View) {
@@ -140,6 +142,8 @@ class MainActivity : AppCompatActivity() {
         button_reset.isEnabled = false
 
         waveView.resumeAnimation()
+
+        button_pause_resume.setImageResource(R.drawable.ic_pause_black_24dp)
     }
 
     fun resetTimer(view: View) {
