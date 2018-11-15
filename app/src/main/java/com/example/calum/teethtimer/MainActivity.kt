@@ -116,10 +116,11 @@ class MainActivity : AppCompatActivity() {
         button_start.visibility = View.INVISIBLE
         button_alarm_fragment.visibility = View.INVISIBLE
         button_pause_resume.visibility = View.VISIBLE
-        button_reset.visibility = View.VISIBLE
 
         waveView.startAnimation()
         waveView.progressValue = -10
+
+        button_pause_resume.setImageResource(R.drawable.ic_pause_black_24dp)
     }
 
     fun pauseTimer(view: View) {
@@ -128,6 +129,8 @@ class MainActivity : AppCompatActivity() {
         window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         waveView.pauseAnimation()
+
+        button_reset.visibility = View.VISIBLE
 
         button_pause_resume.setImageResource(R.drawable.ic_play_arrow_black_24dp)
     }
@@ -142,6 +145,8 @@ class MainActivity : AppCompatActivity() {
         button_reset.isEnabled = false
 
         waveView.resumeAnimation()
+
+        button_reset.visibility = View.INVISIBLE
 
         button_pause_resume.setImageResource(R.drawable.ic_pause_black_24dp)
     }
@@ -159,6 +164,11 @@ class MainActivity : AppCompatActivity() {
         button_start.text = "Start"
         button_start.isEnabled = true
         button_reset.isEnabled = false
+
+        button_start.visibility = View.VISIBLE
+        button_alarm_fragment.visibility = View.VISIBLE
+        button_pause_resume.visibility = View.INVISIBLE
+        button_reset.visibility = View.INVISIBLE
     }
 
     /*fun showSetAlarms(sharedPreferences: SharedPreferences) {
