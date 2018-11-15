@@ -91,6 +91,9 @@ class MainActivity : AppCompatActivity() {
 
                 button_start.isEnabled = false
                 button_reset.isEnabled = true
+
+                button_pause_resume.visibility = View.INVISIBLE
+                button_reset.visibility = View.VISIBLE
             }
         }
     }
