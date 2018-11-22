@@ -54,7 +54,6 @@ class MainActivity : AppCompatActivity() {
                     //waveLoadingView.centerTitle = "Pause"
                     //textView_timer.text = "Paused"
                     button_start.text = "Resume"
-                    button_reset.isEnabled = true
                     resumeFromMillis = millisInFuture
                     cancel()
                 } else {
@@ -90,7 +89,6 @@ class MainActivity : AppCompatActivity() {
                 waveView.endAnimation()
 
                 button_start.isEnabled = false
-                button_reset.isEnabled = true
 
                 button_pause_resume.visibility = View.INVISIBLE
                 button_reset.visibility = View.VISIBLE
@@ -145,7 +143,6 @@ class MainActivity : AppCompatActivity() {
         timerRunning = true
         isPaused = false
         button_start.text = "Pause"
-        button_reset.isEnabled = false
 
         waveView.resumeAnimation()
 
@@ -166,7 +163,6 @@ class MainActivity : AppCompatActivity() {
         resumeFromMillis = 0
         button_start.text = "Start"
         button_start.isEnabled = true
-        button_reset.isEnabled = false
 
         button_start.visibility = View.VISIBLE
         button_alarm_fragment.visibility = View.VISIBLE
