@@ -27,10 +27,8 @@
             app:wlv_round_rectangle="true"
             app:wlv_shapeType="circle"
             app:wlv_titleCenter="2:00"
-            app:wlv_titleCenterColor="@color/colorAccent"
+            app:wlv_titleCenterColor="@color/colorText"
             app:wlv_titleCenterSize="24sp"
-            app:wlv_titleCenterStrokeColor="@color/colorPrimaryDark"
-            app:wlv_titleCenterStrokeWidth="3dp"
             app:wlv_triangle_direction="north"
             app:wlv_waveAmplitude="50"
             app:wlv_waveColor="@color/colorPrimaryDark" />
@@ -43,6 +41,7 @@
             android:layout_marginTop="32dp"
             android:onClick="startTimer"
             android:text="Start"
+            android:textColor="@color/colorText"
             app:layout_constraintEnd_toEndOf="@+id/waveView"
             app:layout_constraintStart_toStartOf="@+id/waveView"
             app:layout_constraintTop_toBottomOf="@+id/waveView" />
