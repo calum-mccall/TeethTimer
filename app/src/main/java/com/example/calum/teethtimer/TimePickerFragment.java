@@ -16,7 +16,7 @@ public class TimePickerFragment extends DialogFragment
         int currentHour = calendar.get(Calendar.HOUR_OF_DAY);
         int currentMinute =calendar.get(Calendar.MINUTE);
 
-        return new TimePickerDialog(getActivity(), this, currentHour, currentMinute,true);
+        return new TimePickerDialog(getActivity(), R.style.TimePickerTheme, this, currentHour, currentMinute,true);
     }
 
     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
