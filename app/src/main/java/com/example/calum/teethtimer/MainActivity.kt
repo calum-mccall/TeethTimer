@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                     waveView.centerTitle = "Paused"
                     //waveLoadingView.centerTitle = "Pause"
                     //textView_timer.text = "Paused"
-                    button_start.text = "Resume"
                     resumeFromMillis = millisInFuture
                     cancel()
                 } else {
@@ -142,7 +141,6 @@ class MainActivity : AppCompatActivity() {
 
         timerRunning = true
         isPaused = false
-        button_start.text = "Pause"
 
         waveView.resumeAnimation()
 
@@ -161,7 +159,6 @@ class MainActivity : AppCompatActivity() {
         //waveLoadingView.centerTitle = ""
         //textView_timer.text = ""
         resumeFromMillis = 0
-        button_start.text = "Start"
         button_start.isEnabled = true
 
         button_start.visibility = View.VISIBLE

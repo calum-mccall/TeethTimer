@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:onClick="startTimer"
-            android:text="Start"
+            android:text="@string/start_alarm_button"
             android:textColor="@color/colorText"
             app:layout_constraintEnd_toEndOf="@+id/waveView"
             app:layout_constraintStart_toStartOf="@+id/waveView"
