@@ -24,6 +24,8 @@ class AlarmsActivity : AppCompatActivity() {
 
         val sharedPreferences = this.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
         showSetAlarms(sharedPreferences)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     fun setMorningAlarm(view: View) {
