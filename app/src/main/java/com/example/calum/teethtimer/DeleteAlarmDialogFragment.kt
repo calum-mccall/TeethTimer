@@ -10,7 +10,7 @@ class DeleteAlarmDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         return activity?.let {
-            val builder = AlertDialog.Builder(it)
+            val builder = AlertDialog.Builder(it, R.style.AlertDialogTheme)
             builder.setMessage("Delete " + tag + " alarm?")
                     .setPositiveButton("Yes", DialogInterface.OnClickListener { dialog, id ->
                         // Positive button

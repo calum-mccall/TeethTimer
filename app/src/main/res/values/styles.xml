@@ -24,4 +24,8 @@
         <item name="android:textColor">@color/colorText</item>
     </style>
 
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/colorText</item>
+    </style>
+
 </resources>
