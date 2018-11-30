@@ -53,7 +53,7 @@
 
             <ImageButton
                 android:id="@+id/button_alarm_fragment"
-                style="@style/AlarmButton"
+                style="@style/AlarmTimerButton"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_marginTop="8dp"
@@ -65,7 +65,7 @@
 
             <ImageButton
                 android:id="@+id/button_pause_resume"
-                style="@style/AlarmButton"
+                style="@style/AlarmTimerButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
@@ -77,7 +77,7 @@
 
             <ImageButton
                 android:id="@+id/button_reset"
-                style="@style/AlarmButton"
+                style="@style/AlarmTimerButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"

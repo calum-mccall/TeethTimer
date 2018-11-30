@@ -40,7 +40,7 @@
         <item name="android:paddingRight">16dp</item>
     </style>
 
-    <style name="AlarmButton" parent="Widget.AppCompat.Button">
+    <style name="AlarmTimerButton" parent="Widget.AppCompat.Button">
         <item name="android:backgroundTint">@color/colorAccentLight</item>
     </style>
 
