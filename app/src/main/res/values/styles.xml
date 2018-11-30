@@ -33,11 +33,15 @@
     </style>
 
     <style name="StartButton" parent="Widget.AppCompat.Button">
-        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
         <item name="android:textColor">@color/colorAccentLight</item>
         <item name="android:textSize">24sp</item>
         <item name="android:paddingLeft">16dp</item>
         <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="AlarmButton" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/colorAccentLight</item>
     </style>
 
 </resources>

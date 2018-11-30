@@ -33,29 +33,37 @@
             app:wlv_waveAmplitude="50"
             app:wlv_waveColor="@color/colorPrimaryDark" />
 
-        <Button
-            android:id="@+id/button_start"
-            style="@style/StartButton"
+        <RelativeLayout
+            android:id="@+id/button_helper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:onClick="startTimer"
-            android:text="@string/start_alarm_button"
             app:layout_constraintEnd_toEndOf="@+id/waveView"
             app:layout_constraintStart_toStartOf="@+id/waveView"
-            app:layout_constraintTop_toBottomOf="@+id/waveView" />
+            app:layout_constraintTop_toBottomOf="@+id/waveView"
+            android:padding="10dp">
 
-        <ImageButton
-            android:id="@+id/button_alarm_fragment"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:onClick="showAlarms"
-            android:src="@drawable/ic_alarm_black_24dp"
-            app:layout_constraintEnd_toEndOf="@+id/button_start"
-            app:layout_constraintStart_toStartOf="@+id/button_start"
-            app:layout_constraintTop_toBottomOf="@+id/button_start" />
+            <Button
+                android:id="@+id/button_start"
+                style="@style/StartButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:onClick="startTimer"
+                android:text="@string/start_alarm_button" />
+
+            <ImageButton
+                android:id="@+id/button_alarm_fragment"
+                style="@style/AlarmButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="8dp"
+                android:onClick="showAlarms"
+                android:src="@drawable/ic_alarm_black_24dp"
+                android:layout_below="@id/button_start"
+                android:layout_alignLeft="@id/button_start"
+                android:layout_alignRight="@id/button_start"/>
+
+        </RelativeLayout>
 
         <ImageButton
             android:id="@+id/button_pause_resume"
