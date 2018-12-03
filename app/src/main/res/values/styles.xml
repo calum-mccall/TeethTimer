@@ -44,6 +44,10 @@
         <item name="android:backgroundTint">@color/colorAccentLight</item>
     </style>
 
+    <style name="PauseResumeButton" parent="Widget.AppCompat.Button">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+    </style>
+
     <style name="AlarmPageButton" parent="Widget.AppCompat.Button">
         <item name="android:backgroundTint">@color/colorAccentLight</item>
     </style>
