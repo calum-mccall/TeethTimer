@@ -36,7 +36,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.calum.teethtimer.MainActivity" />
         </activity>
-        <activity android:name=".InfoActivity"></activity>
+        <activity android:name=".InfoActivity"
+            android:configChanges="orientation"
+            android:label="@string/action_info"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.calum.teethtimer.MainActivity"/>
+        </activity>
     </application>
 
 </manifest>
