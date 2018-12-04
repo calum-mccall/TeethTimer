@@ -6,8 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
-import android.view.View
-import android.view.WindowManager
+import android.view.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.TimeUnit
 
@@ -38,6 +37,11 @@ class MainActivity : AppCompatActivity() {
 
         val sharedPreferences = this.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
         //showSetAlarms(sharedPreferences)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.action_menu, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     //Creates timer, the time it will last and the time between intervals

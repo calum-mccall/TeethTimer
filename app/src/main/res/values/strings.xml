@@ -12,4 +12,5 @@
     <string name="morning_label">AM</string>
     <string name="evening_label">PM</string>
     <string name="start_alarm_button">Start</string>
+    <string name="action_info">Info</string>
 </resources>
