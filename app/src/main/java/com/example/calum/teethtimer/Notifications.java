@@ -32,7 +32,7 @@ public class Notifications {
                 PendingIntent.FLAG_UPDATE_CURRENT);
 
         mBuilder = new NotificationCompat.Builder(mContext, NOTIFICATION_CHANNEL_ID);
-        mBuilder.setSmallIcon(R.drawable.ic_notification_24dp);
+        mBuilder.setSmallIcon(R.drawable.ic_notification);
         mBuilder.setContentTitle(title)
                 .setContentText(message)
                 .setAutoCancel(true)
@@ -42,7 +42,7 @@ public class Notifications {
         mNotificationManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
 
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            int importance = NotificationManager.IMPORTANCE_HIGH;
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
             NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Morning and Evening Alarm", importance);
             notificationChannel.enableLights(true);
             notificationChannel.setLightColor(Color.RED);
