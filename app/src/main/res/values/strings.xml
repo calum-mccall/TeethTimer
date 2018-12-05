@@ -13,4 +13,9 @@
     <string name="evening_label">PM</string>
     <string name="start_alarm_button">Start</string>
     <string name="action_info">Info</string>
+    <string name="info_me">App created by Calum McCall</string>
+    <string name="info_email">Contact at: calumccmccall@gmail.com</string>
+    <string name="info_logo_credit"></string>
+    <string name="info_wave_credit"></string>
+    <string name="info_konfetti_credit"></string>
 </resources>
