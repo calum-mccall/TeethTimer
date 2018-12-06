@@ -28,4 +28,8 @@
     <string name="alarm_button_description">Open Alarms</string>
     <string name="pause_button_description">Pause/Resume Timer</string>
     <string name="reset_button_description">Reset Timer</string>
+    <string name="edit_morning_button_description">Edit Morning Alarm</string>
+    <string name="delete_morning_button_description">Delete Morning Alarm</string>
+    <string name="edit_evening_button_description">Edit Morning Alarm</string>
+    <string name="delete_evening_button_description">Delete Evening Alarm</string>
 </resources>
