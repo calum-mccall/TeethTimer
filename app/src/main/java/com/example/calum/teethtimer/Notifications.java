@@ -16,8 +16,6 @@ public class Notifications {
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder mBuilder;
     public static final String NOTIFICATION_CHANNEL_ID = "10001";
-    public static final String MORNING_CHANNEL_ID = "5005";
-    public static final String EVENING_CHANNEL_ID = "6006";
 
     public Notifications(Context context){
         mContext = context;
