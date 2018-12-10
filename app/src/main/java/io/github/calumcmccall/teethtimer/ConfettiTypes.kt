@@ -1,11 +1,8 @@
-package com.example.calum.teethtimer
+package io.github.calumcmccall.teethtimer
 
 import android.graphics.Color
-import android.view.View
-import com.example.calum.teethtimer.R.id.viewKonfetti
 import nl.dionsegijn.konfetti.models.Shape
 import nl.dionsegijn.konfetti.models.Size
-import kotlinx.android.synthetic.main.activity_main.*
 import nl.dionsegijn.konfetti.KonfettiView
 
 class ConfettiTypes {

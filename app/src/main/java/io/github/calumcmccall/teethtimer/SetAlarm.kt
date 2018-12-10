@@ -1,14 +1,10 @@
-package com.example.calum.teethtimer
+package io.github.calumcmccall.teethtimer
 
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
-import android.nfc.Tag
-import android.os.SystemClock
-import android.provider.Settings.Global.getString
-import android.provider.Settings.Global.putString
 import android.util.Log
 import android.widget.Toast
 import java.util.*

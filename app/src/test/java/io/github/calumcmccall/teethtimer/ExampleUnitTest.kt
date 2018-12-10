@@ -1,4 +1,4 @@
-package com.example.calum.teethtimer
+package io.github.calumcmccall.teethtimer
 
 import org.junit.Test
 

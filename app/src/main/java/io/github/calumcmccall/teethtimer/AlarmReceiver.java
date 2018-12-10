@@ -1,11 +1,9 @@
-package com.example.calum.teethtimer;
+package io.github.calumcmccall.teethtimer;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.nfc.Tag;
 import android.util.Log;
-import android.widget.Toast;
 
 import static android.content.ContentValues.TAG;
 

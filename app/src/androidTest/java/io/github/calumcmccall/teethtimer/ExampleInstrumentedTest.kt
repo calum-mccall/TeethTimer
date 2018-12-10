@@ -1,4 +1,4 @@
-package com.example.calum.teethtimer
+package io.github.calumcmccall.teethtimer
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
