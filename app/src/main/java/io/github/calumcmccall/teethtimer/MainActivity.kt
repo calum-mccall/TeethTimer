@@ -61,9 +61,16 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 if (isPaused) {
+                    cancel()
+                    
                     waveView.centerTitle = "Paused"
                     resumeFromMillis = millisInFuture
-                    cancel()
+
+                    window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+
+                    waveView.pauseAnimation()
+                    button_reset.visibility = View.VISIBLE
+                    button_pause_resume.setImageResource(R.drawable.ic_play_arrow_black_24dp)
                 } else {
                     //Convert the remaining time into minutes:seconds
                     val remainingMinutes = TimeUnit.MILLISECONDS.toMinutes(millisInFuture)
@@ -129,13 +136,6 @@ class MainActivity : AppCompatActivity() {
     fun pauseTimer(view: View) {
         isPaused = true
         timerRunning = false
-        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-
-        waveView.pauseAnimation()
-
-        button_reset.visibility = View.VISIBLE
-
-        button_pause_resume.setImageResource(R.drawable.ic_play_arrow_black_24dp)
     }
 
     fun resumeTimer(view: View) {
