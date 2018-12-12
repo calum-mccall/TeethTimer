@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
                 if (isPaused) {
                     cancel()
-                    
+
                     waveView.centerTitle = "Paused"
                     resumeFromMillis = millisInFuture
 

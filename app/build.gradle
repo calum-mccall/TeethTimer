@@ -37,4 +37,5 @@ dependencies {
     //WaveLoadingView library from - https://github.com/tangqi92/WaveLoadingView
     implementation 'me.itangqi.waveloadingview:library:0.3.5'
     implementation 'com.android.support:cardview-v7:26.1.0'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
 }

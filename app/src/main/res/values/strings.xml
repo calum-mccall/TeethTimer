@@ -30,6 +30,6 @@
     <string name="reset_button_description">Reset Timer</string>
     <string name="edit_morning_button_description">Edit Morning Alarm</string>
     <string name="delete_morning_button_description">Delete Morning Alarm</string>
-    <string name="edit_evening_button_description">Edit Morning Alarm</string>
+    <string name="edit_evening_button_description">Edit Evening Alarm</string>
     <string name="delete_evening_button_description">Delete Evening Alarm</string>
 </resources>
