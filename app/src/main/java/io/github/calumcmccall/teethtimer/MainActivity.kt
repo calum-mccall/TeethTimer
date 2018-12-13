@@ -79,7 +79,6 @@ class MainActivity : AppCompatActivity() {
 
                     waveView.centerTitle = String.format("%01d:%02d", remainingMinutes, remainingSeconds)
                     waveView.progressValue += 1
-                    Log.i(TAG, "Wave is at progress value " + waveView.progressValue)
 
                     if (remainingMinutes < 1 && remainingSeconds < 10) {
                         waveView.centerTitle = String.format("%01d", remainingSeconds)

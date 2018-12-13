@@ -56,7 +56,6 @@ class SetAlarm {
         )
 
         Toast.makeText(context, morningOrEvening + " Alarm set for " + alarmTime, Toast.LENGTH_SHORT).show()
-        Log.i(TAG, morningOrEvening + " Alarm set for: " + hour + ":" + minute)
     }
 
     fun deleteAlarm(context: Context, morningOrEvening: String) {
