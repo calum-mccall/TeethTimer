@@ -14,8 +14,6 @@ public class AlarmReceiver extends BroadcastReceiver {
 
         String timeOfAlarm = intent.getStringExtra("timeOfAlarm");
 
-        Log.i(TAG, "Showing alarmed notification ");
-
         Notifications notifications = new Notifications(context);
 
         if (timeOfAlarm.equals("Morning")) {

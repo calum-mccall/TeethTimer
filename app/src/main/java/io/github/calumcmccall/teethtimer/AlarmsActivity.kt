@@ -31,13 +31,11 @@ class AlarmsActivity : AppCompatActivity() {
     fun setMorningAlarm(view: View) {
         var morningTimePickerFragment = TimePickerFragment()
         morningTimePickerFragment.show(supportFragmentManager, getString(R.string.morning_time_picker))
-        Log.i(TAG, "Showing timePicker for morning alarm")
     }
 
     fun setEveningAlarm(view: View) {
         var eveningTimePickerFragment = TimePickerFragment()
         eveningTimePickerFragment.show(supportFragmentManager, getString(R.string.evening_time_picker))
-        Log.i(TAG, "Showing timePicker for evening alarm")
     }
 
     fun showSetAlarms(sharedPreferences: SharedPreferences) {
@@ -51,12 +49,10 @@ class AlarmsActivity : AppCompatActivity() {
     fun deleteMorningAlarm(view: View) {
         var deleteMorningAlarmDialog = DeleteAlarmDialogFragment()
         deleteMorningAlarmDialog.show(fragmentManager, getString(R.string.delete_morning_alarm_dialog))
-        Log.i(TAG, "Showing dialog for deleting morning alarm")
     }
 
     fun deleteEveningAlarm(view: View) {
         var deleteEveningAlarmDialog = DeleteAlarmDialogFragment()
         deleteEveningAlarmDialog.show(fragmentManager, getString(R.string.delete_evening_alarm_dialog))
-        Log.i(TAG, "Showing dialog for deleting evening alarm")
     }
 }
