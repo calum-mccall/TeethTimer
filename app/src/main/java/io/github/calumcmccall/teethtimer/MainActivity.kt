@@ -1,11 +1,14 @@
 package io.github.calumcmccall.teethtimer
 
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.os.VibrationEffect
 import android.util.Log
 import android.view.*
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.TimeUnit
 
@@ -82,6 +85,10 @@ class MainActivity : AppCompatActivity() {
 
                     if (remainingMinutes < 1 && remainingSeconds < 10) {
                         waveView.centerTitle = String.format("%01d", remainingSeconds)
+                    }
+
+                    if (remainingSeconds <60 && remainingSeconds >58 || remainingSeconds <31 && remainingSeconds >29) {
+                        vibrate()
                     }
                 }
             }
@@ -170,5 +177,9 @@ class MainActivity : AppCompatActivity() {
     fun showAlarms(view: View) {
         val intent = Intent(this, AlarmsActivity::class.java)
         startActivity(intent)
+    }
+
+    fun vibrate() {
+        Toast.makeText(this, "Vibrate", Toast.LENGTH_SHORT).show()
     }
 }
