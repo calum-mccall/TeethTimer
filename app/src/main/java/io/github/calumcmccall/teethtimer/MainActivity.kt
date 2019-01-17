@@ -2,10 +2,8 @@ package io.github.calumcmccall.teethtimer
 
 import android.content.Context
 import android.content.Intent
+import android.os.*
 import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
-import android.os.CountDownTimer
-import android.os.VibrationEffect
 import android.util.Log
 import android.view.*
 import android.widget.Toast
@@ -180,6 +178,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun vibrate() {
-        Toast.makeText(this, "Vibrate", Toast.LENGTH_SHORT).show()
+        val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            vibrator.vibrate(VibrationEffect.createOneShot(500, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            vibrator.vibrate(500)
+        }
     }
 }
