@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
     var timerRunning = false
     var isPaused = false
 
+    var dailyProgress = DailyProgress()
+
     val TAG = "Main Activity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,7 +109,7 @@ class MainActivity : AppCompatActivity() {
                 button_pause_resume.visibility = View.INVISIBLE
                 button_reset.visibility = View.VISIBLE
 
-                brushedProgress()
+                dailyProgress.brushed(progressBar_day)
             }
         }
     }
@@ -187,9 +189,5 @@ class MainActivity : AppCompatActivity() {
         } else {
             vibrator.vibrate(100)
         }
-    }
-
-    fun brushedProgress() {
-        progressBar_day.incrementProgressBy(50)
     }
 }
