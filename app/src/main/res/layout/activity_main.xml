@@ -107,12 +107,13 @@
 
         <ProgressBar
             android:id="@+id/progressBar_day"
-            style="?android:attr/progressBarStyleHorizontal"
+            style="@android:style/Widget.ProgressBar.Horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@+id/button_helper"
             app:layout_constraintStart_toStartOf="@+id/button_helper"
-            app:layout_constraintTop_toBottomOf="@+id/button_helper" />
+            app:layout_constraintTop_toBottomOf="@+id/button_helper"
+            android:progress="0"/>
 
         <nl.dionsegijn.konfetti.KonfettiView
             android:id="@+id/viewKonfetti"

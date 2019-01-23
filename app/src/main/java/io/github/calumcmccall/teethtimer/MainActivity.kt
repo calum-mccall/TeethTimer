@@ -106,6 +106,8 @@ class MainActivity : AppCompatActivity() {
 
                 button_pause_resume.visibility = View.INVISIBLE
                 button_reset.visibility = View.VISIBLE
+
+                brushedProgress()
             }
         }
     }
@@ -185,5 +187,9 @@ class MainActivity : AppCompatActivity() {
         } else {
             vibrator.vibrate(100)
         }
+    }
+
+    fun brushedProgress() {
+        progressBar_day.incrementProgressBy(50)
     }
 }
