@@ -31,6 +31,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         setSupportActionBar(main_toolbar)
+
+        dailyProgress.fillCurrent(this, progressBar_day)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -109,7 +111,7 @@ class MainActivity : AppCompatActivity() {
                 button_pause_resume.visibility = View.INVISIBLE
                 button_reset.visibility = View.VISIBLE
 
-                dailyProgress.brushed(progressBar_day)
+                //dailyProgress.brushed(this@MainActivity, progressBar_day)
             }
         }
     }
@@ -139,6 +141,8 @@ class MainActivity : AppCompatActivity() {
         waveView.progressValue = -10
 
         button_pause_resume.setImageResource(R.drawable.ic_pause_black_24dp)
+
+        dailyProgress.brushed(this@MainActivity, progressBar_day)
     }
 
     fun pauseTimer(view: View) {

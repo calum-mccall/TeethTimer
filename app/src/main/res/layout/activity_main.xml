@@ -112,8 +112,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@+id/button_helper"
             app:layout_constraintStart_toStartOf="@+id/button_helper"
-            app:layout_constraintTop_toBottomOf="@+id/button_helper"
-            android:progress="0"/>
+            app:layout_constraintTop_toBottomOf="@+id/button_helper" />
 
         <nl.dionsegijn.konfetti.KonfettiView
             android:id="@+id/viewKonfetti"
