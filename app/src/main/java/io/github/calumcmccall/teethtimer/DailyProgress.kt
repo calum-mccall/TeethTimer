@@ -30,4 +30,8 @@ class DailyProgress {
         progressBar.incrementProgressBy(day.toInt())
         Toast.makeText(context, day.toString(), Toast.LENGTH_SHORT).show()
     }
+
+    fun sameDay() {
+        //Get current day and compare to day saved in shared preferences, if same then fill current. If different current to 0 and replace current day
+    }
 }
