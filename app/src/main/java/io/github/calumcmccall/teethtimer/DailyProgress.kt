@@ -1,10 +1,14 @@
 package io.github.calumcmccall.teethtimer
 
 import android.content.Context
+import android.text.format.DateUtils
 import android.widget.ProgressBar
 import android.widget.Toast
+import java.time.Month
 import java.time.Year
 import java.util.*
+import java.util.Calendar.MONTH
+
 
 class DailyProgress {
 
@@ -37,15 +41,20 @@ class DailyProgress {
         //Get current day and compare to day saved in shared preferences, if same then fill current. If different current to 0 and replace current day
         val sharedPreferences = context?.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
 
-        var now = Calendar.DAY_OF_MONTH
-        var day_check = sharedPreferences.getString(R.string.current_day.toString(), now.toString())
+        var c = Calendar.getInstance()
+        var now = c.get(Calendar.DAY_OF_YEAR)
+        var day_check = sharedPreferences.getString(R.string.current_day.toString(), "0")
+        Toast.makeText(context, now.toString(), Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, day_check.toString(), Toast.LENGTH_SHORT).show()
 
-        if (day_check.equals(now.toString())) {
+
+        if (now == day_check.toInt()) {
             fillCurrent(context, progressBar)
-            Toast.makeText(context, "Checking Same Day", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Same Day", Toast.LENGTH_SHORT).show()
         } else {
             sharedPreferences.edit().putString(R.string.current_day.toString(), now.toString()).apply()
-            sharedPreferences.edit().putInt("0", 0)
+            sharedPreferences.edit().putString(R.string.current_progress.toString(), "0")
+            Toast.makeText(context, "Dates are different", Toast.LENGTH_SHORT).show()
         }
     }
 }
