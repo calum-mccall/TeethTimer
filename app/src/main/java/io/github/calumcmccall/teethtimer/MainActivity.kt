@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(main_toolbar)
 
-        dailyProgress.fillCurrent(this, progressBar_day)
+        dailyProgress.sameDay(this, progressBar_day)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
