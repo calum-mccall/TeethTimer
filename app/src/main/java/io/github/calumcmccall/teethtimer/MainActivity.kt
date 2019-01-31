@@ -102,8 +102,6 @@ class MainActivity : AppCompatActivity() {
 
                 resumeFromMillis = 0
 
-                confettiSelector.firstTimeConfetti(viewKonfetti)
-
                 waveView.endAnimation()
 
                 button_start.isEnabled = false
@@ -112,6 +110,11 @@ class MainActivity : AppCompatActivity() {
                 button_reset.visibility = View.VISIBLE
 
                 dailyProgress.brushed(this@MainActivity, progressBar_day)
+
+                if (progressBar_day.progress == 100) {
+                    confettiSelector.firstTimeConfetti(viewKonfetti)
+
+                }
             }
         }
     }
