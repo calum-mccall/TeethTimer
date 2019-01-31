@@ -113,7 +113,6 @@ class MainActivity : AppCompatActivity() {
 
                 if (progressBar_day.progress == 100) {
                     confettiSelector.firstTimeConfetti(viewKonfetti)
-
                 }
             }
         }

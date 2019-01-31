@@ -34,7 +34,6 @@ class DailyProgress {
         var day = sharedPreferences.getInt(R.string.current_progress.toString(), daily)
 
         progressBar.incrementProgressBy(day.toInt())
-        Toast.makeText(context, day.toString(), Toast.LENGTH_SHORT).show()
     }
 
     fun sameDay(context: Context, progressBar: ProgressBar) {
@@ -44,17 +43,12 @@ class DailyProgress {
         var c = Calendar.getInstance()
         var now = c.get(Calendar.DAY_OF_YEAR)
         var day_check = sharedPreferences.getString(R.string.current_day.toString(), "0")
-        Toast.makeText(context, now.toString(), Toast.LENGTH_SHORT).show()
-        Toast.makeText(context, day_check.toString(), Toast.LENGTH_SHORT).show()
-
 
         if (now == day_check.toInt()) {
             fillCurrent(context, progressBar)
-            Toast.makeText(context, "Same Day", Toast.LENGTH_SHORT).show()
         } else {
             sharedPreferences.edit().putString(R.string.current_day.toString(), now.toString()).apply()
             sharedPreferences.edit().putString(R.string.current_progress.toString(), "0")
-            Toast.makeText(context, "Dates are different", Toast.LENGTH_SHORT).show()
         }
     }
 }
