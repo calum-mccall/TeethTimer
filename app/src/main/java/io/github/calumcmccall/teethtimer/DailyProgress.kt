@@ -51,4 +51,6 @@ class DailyProgress {
             sharedPreferences.edit().putString(R.string.current_progress.toString(), "0")
         }
     }
+
+
 }
