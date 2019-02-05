@@ -14,8 +14,8 @@ class AlarmsActivity : AppCompatActivity() {
 
     val TAG = "Alarms Activity"
 
-    var morningAlarm = ""
-    var eveningAlarm = ""
+    var morningAlarm = "No Alarm Set"
+    var eveningAlarm = "No Alarm Set"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
