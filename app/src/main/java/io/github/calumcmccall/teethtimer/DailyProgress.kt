@@ -37,7 +37,7 @@ class DailyProgress {
     fun fillCurrent(context: Context, progressBar: ProgressBar) {
         val sharedPreferences = context?.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
 
-        val day = sharedPreferences.getInt(R.string.current_progress.toString(), daily)
+        var day = sharedPreferences.getInt(R.string.current_progress.toString(), daily)
 
         progressBar.incrementProgressBy(day.toInt())
     }
@@ -81,14 +81,14 @@ class DailyProgress {
         val  sharedPreferences = context?.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
 
         sharedPreferences.edit().putString(R.string.current_day.toString(), now).apply()
-        sharedPreferences.edit().putString(R.string.current_progress.toString(), "0").apply()
+        sharedPreferences.edit().putInt(R.string.current_progress.toString(), 0).apply()
         sharedPreferences.edit().putBoolean(R.string.completed_today.toString(), false).apply()
     }
 
     fun displayStreak (context: Context, textView: TextView) {
         val sharedPreferences = context?.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
 
-        val streak = sharedPreferences.getInt(R.string.streak.toString(), 0)
+        var streak = sharedPreferences.getInt(R.string.streak.toString(), 0)
 
         textView.text = streak.toString()
     }
