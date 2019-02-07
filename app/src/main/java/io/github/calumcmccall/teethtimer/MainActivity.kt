@@ -110,7 +110,7 @@ class MainActivity : AppCompatActivity() {
                 button_pause_resume.visibility = View.INVISIBLE
                 button_reset.visibility = View.VISIBLE
 
-                //dailyProgress.brushed(this@MainActivity, progressBar_day)
+                dailyProgress.brushed(this@MainActivity, progressBar_day)
 
                 dailyProgress.displayStreak(this@MainActivity, textView_streak)
 
@@ -146,8 +146,6 @@ class MainActivity : AppCompatActivity() {
         waveView.progressValue = -10
 
         button_pause_resume.setImageResource(R.drawable.ic_pause_black_24dp)
-
-        dailyProgress.brushed(this@MainActivity, progressBar_day)
     }
 
     fun pauseTimer(view: View) {

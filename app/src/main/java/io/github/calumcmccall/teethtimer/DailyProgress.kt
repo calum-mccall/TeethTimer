@@ -53,7 +53,6 @@ class DailyProgress {
         if (now == day_check.toInt()) {
             fillCurrent(context, progressBar)
         } else if (now - day_check.toInt() == 1) {
-            Toast.makeText(context, "Streak", Toast.LENGTH_SHORT).show()
             resetProgress(context, progressBar, now.toString())
         } else {
             resetProgress(context, progressBar, now.toString())
@@ -75,8 +74,6 @@ class DailyProgress {
             sharedPreferences.edit().putInt(R.string.streak.toString(), streak).apply()
 
             sharedPreferences.edit().putBoolean(R.string.completed_today.toString(), true).apply()
-
-            Toast.makeText(context, "Completed " + streak, Toast.LENGTH_SHORT).show()
         }
     }
 
