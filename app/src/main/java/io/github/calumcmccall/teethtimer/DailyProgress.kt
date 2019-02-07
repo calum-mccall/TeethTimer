@@ -90,6 +90,10 @@ class DailyProgress {
 
         var streak = sharedPreferences.getInt(R.string.streak.toString(), 0)
 
-        textView.text = streak.toString()
+        if (streak != 0) {
+            textView.text = streak.toString() + " day streak"
+        } else {
+            textView.text = ""
+        }
     }
 }
