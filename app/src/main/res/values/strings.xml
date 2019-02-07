@@ -35,4 +35,5 @@
     <string name="current_progress">0</string>
     <string name="current_day"></string>
     <string name="streak">0</string>
+    <string name="completed_today">false</string>
 </resources>

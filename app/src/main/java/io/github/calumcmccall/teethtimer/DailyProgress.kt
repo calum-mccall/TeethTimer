@@ -54,22 +54,30 @@ class DailyProgress {
             fillCurrent(context, progressBar)
         } else if (now - day_check.toInt() == 1) {
             Toast.makeText(context, "Streak", Toast.LENGTH_SHORT).show()
-            //call a streak function and reset progress function
+            resetProgress(context, progressBar, now.toString())
         } else {
             resetProgress(context, progressBar, now.toString())
+            sharedPreferences.edit().putInt(R.string.streak.toString(), 0).apply()
         }
     }
 
     fun completed(context: Context) {
         val sharedPreferences = context?.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
 
-        var streak = sharedPreferences.getInt(R.string.streak.toString(), 0)
+        var completedToday = sharedPreferences.getBoolean(R.string.completed_today.toString(), false)
 
-        streak = streak + 1
+        if (completedToday == false) {
 
-        sharedPreferences.edit().putInt(R.string.streak.toString(), streak).apply()
+            var streak = sharedPreferences.getInt(R.string.streak.toString(), 0)
 
-        Toast.makeText(context, "Completed " + streak, Toast.LENGTH_SHORT).show()
+            streak = streak + 1
+
+            sharedPreferences.edit().putInt(R.string.streak.toString(), streak).apply()
+
+            sharedPreferences.edit().putBoolean(R.string.completed_today.toString(), true).apply()
+
+            Toast.makeText(context, "Completed " + streak, Toast.LENGTH_SHORT).show()
+        }
     }
 
     fun resetProgress(context: Context, progressBar: ProgressBar, now: String) {
@@ -77,5 +85,6 @@ class DailyProgress {
 
         sharedPreferences.edit().putString(R.string.current_day.toString(), now).apply()
         sharedPreferences.edit().putString(R.string.current_progress.toString(), "0").apply()
+        sharedPreferences.edit().putBoolean(R.string.completed_today.toString(), false).apply()
     }
 }
