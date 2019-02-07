@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(main_toolbar)
 
         dailyProgress.sameDay(this, progressBar_day)
+        dailyProgress.displayStreak(this, textView_streak)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -110,6 +111,8 @@ class MainActivity : AppCompatActivity() {
                 button_reset.visibility = View.VISIBLE
 
                 //dailyProgress.brushed(this@MainActivity, progressBar_day)
+
+                dailyProgress.displayStreak(this@MainActivity, textView_streak)
 
                 if (progressBar_day.progress == 100) {
                     confettiSelector.firstTimeConfetti(viewKonfetti)
