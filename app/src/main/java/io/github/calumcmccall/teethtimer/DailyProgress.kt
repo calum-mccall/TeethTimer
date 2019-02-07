@@ -3,6 +3,7 @@ package io.github.calumcmccall.teethtimer
 import android.content.Context
 import android.text.format.DateUtils
 import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import java.time.Month
 import java.time.Year
@@ -15,9 +16,14 @@ class DailyProgress {
     var daily = 0
 
     fun brushed(context: Context, progressBar: ProgressBar) {
-        progressBar.incrementProgressBy(50)
+        if (progressBar.progress < 100) {
+            progressBar.incrementProgressBy(50)
+            currentProgress(context, progressBar)
+        }
 
-        currentProgress(context, progressBar)
+        if (progressBar.progress == 100) {
+            completed(context)
+        }
     }
 
     fun currentProgress(context: Context, progressBar: ProgressBar) {
@@ -46,11 +52,30 @@ class DailyProgress {
 
         if (now == day_check.toInt()) {
             fillCurrent(context, progressBar)
+        } else if (now - day_check.toInt() == 1) {
+            Toast.makeText(context, "Streak", Toast.LENGTH_SHORT).show()
+            //call a streak function and reset progress function
         } else {
-            sharedPreferences.edit().putString(R.string.current_day.toString(), now.toString()).apply()
-            sharedPreferences.edit().putString(R.string.current_progress.toString(), "0")
+            resetProgress(context, progressBar, now.toString())
         }
     }
 
+    fun completed(context: Context) {
+        val sharedPreferences = context?.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
 
+        var streak = sharedPreferences.getInt(R.string.streak.toString(), 0)
+
+        streak = streak + 1
+
+        sharedPreferences.edit().putInt(R.string.streak.toString(), streak).apply()
+
+        Toast.makeText(context, "Completed " + streak, Toast.LENGTH_SHORT).show()
+    }
+
+    fun resetProgress(context: Context, progressBar: ProgressBar, now: String) {
+        val  sharedPreferences = context?.getSharedPreferences(R.string.preference_file_key.toString(), Context.MODE_PRIVATE)
+
+        sharedPreferences.edit().putString(R.string.current_day.toString(), now).apply()
+        sharedPreferences.edit().putString(R.string.current_progress.toString(), "0").apply()
+    }
 }

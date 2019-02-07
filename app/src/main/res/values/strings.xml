@@ -34,5 +34,5 @@
     <string name="delete_evening_button_description">Delete Evening Alarm</string>
     <string name="current_progress">0</string>
     <string name="current_day"></string>
-    <string name="streak"></string>
+    <string name="streak">0</string>
 </resources>
