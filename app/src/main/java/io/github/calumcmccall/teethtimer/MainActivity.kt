@@ -110,6 +110,9 @@ class MainActivity : AppCompatActivity() {
                 button_pause_resume.visibility = View.INVISIBLE
                 button_reset.visibility = View.VISIBLE
 
+                progressBar_day.visibility = View.VISIBLE
+                textView_streak.visibility = View.VISIBLE
+
                 dailyProgress.brushed(this@MainActivity, progressBar_day)
 
                 dailyProgress.displayStreak(this@MainActivity, textView_streak)
@@ -141,6 +144,9 @@ class MainActivity : AppCompatActivity() {
         button_start.visibility = View.INVISIBLE
         button_alarm_fragment.visibility = View.INVISIBLE
         button_pause_resume.visibility = View.VISIBLE
+
+        progressBar_day.visibility = View.INVISIBLE
+        textView_streak.visibility = View.INVISIBLE
 
         waveView.startAnimation()
         waveView.progressValue = -10
@@ -181,6 +187,9 @@ class MainActivity : AppCompatActivity() {
         button_alarm_fragment.visibility = View.VISIBLE
         button_pause_resume.visibility = View.INVISIBLE
         button_reset.visibility = View.INVISIBLE
+
+        progressBar_day.visibility = View.VISIBLE
+        textView_streak.visibility = View.VISIBLE
     }
 
     fun showAlarms(view: View) {
