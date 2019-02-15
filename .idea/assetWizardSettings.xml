@@ -139,11 +139,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="height" value="32" />
-                            <entry key="outputName" value="ic_replay_black_32dp" />
-                            <entry key="overrideSize" value="true" />
+                            <entry key="outputName" value="ic_replay_black_24dp" />
                             <entry key="sourceFile" value="C:\Users\Calum" />
-                            <entry key="width" value="32" />
                           </map>
                         </option>
                       </PersistentState>

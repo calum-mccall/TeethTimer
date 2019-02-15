@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="io.github.calumcmccall.teethtimer">
 
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
@@ -13,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="io.github.calumcmccall.teethtimer.MainActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -24,31 +23,30 @@
         </activity>
 
         <receiver
-            android:name=".AlarmReceiver"
+            android:name="io.github.calumcmccall.teethtimer.AlarmReceiver"
             android:enabled="true"
             android:exported="false" />
 
         <activity
-            android:name=".AlarmsActivity"
+            android:name="io.github.calumcmccall.teethtimer.AlarmsActivity"
             android:configChanges="orientation"
             android:label="@string/title_activity_alarms"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="io.github.calumcmccall.teethtimer.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.github.calumcmccall.teethtimer.MainActivity" />
         </activity>
-        <activity
-            android:name=".InfoActivity"
+        <activity android:name="io.github.calumcmccall.teethtimer.InfoActivity"
             android:configChanges="orientation"
             android:label="@string/action_info"
-            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
+            android:parentActivityName="io.github.calumcmccall.teethtimer.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="io.github.calumcmccall.teethtimer.MainActivity" />
+                android:value="io.github.calumcmccall.teethtimer.MainActivity"/>
         </activity>
     </application>
 
