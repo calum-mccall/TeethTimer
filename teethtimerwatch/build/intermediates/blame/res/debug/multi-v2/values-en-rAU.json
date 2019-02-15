@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\AndroidStudioProjects\\TeethTimer\\teethtimerwatch\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Calum\\.gradle\\caches\\transforms-1\\files-1.1\\wear-28.0.0.aar\\3597f8867cddd163fd1a454855f2cc97\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,164",
+                        "endColumns": "108,116",
+                        "endOffsets": "159,276"
+                    },
+                    "to": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "156,265",
+                        "endColumns": "108,116",
+                        "endOffsets": "260,377"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Calum\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\a92f937d73100b7b8f2c7ca4c5a5d3ae\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

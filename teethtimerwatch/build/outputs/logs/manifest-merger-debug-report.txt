@@ -1,0 +1,221 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:2:1-38:12
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\wearable-2.4.0.aar\87a8bed1c4b95f28e4d8e11a33fb48b7\AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-wearable-16.0.1.aar\8912b771f13a19cd9214edbe63984a7c\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:percent:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\percent-28.0.0.aar\65f6571aa3905100383904e13d322a3e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\5f507e188f523f75087efc82e4882be9\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\c7a461e18352b69c6562ea2cb5405d43\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\e5d408bf4b00af5fc75bfe610fa0555b\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\fe369c2b59332b26783fece3de989f20\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:wear:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\wear-28.0.0.aar\3597f8867cddd163fd1a454855f2cc97\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\4949c5b956a00bb74d4a71c68bdf58af\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\e4259f341167656758023e326ac5f524\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\849d9735a2f40fc5f7227cf9564e1a95\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3f4f81fb07c9940d844963b867d07446\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\9e2b4b80cc7403a1e22f37abcb6c1633\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\9f205a8e39f2947257744ebc832d261a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\2f6a557de560b0c2078a46563d100da7\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\5b0bc4db51ba96f008ae4a0ca42b5483\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\6a25f2222fdcb045da6b7f0e98ace29f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f6961fbe7f859f829cf4680648f63e80\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\de61b3f74337e81f263a0c01fc66a15c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\ff7349567451bffd681dc1aeac0a692e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\f848bc8ecfd05ad13d710f7e92a1d527\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a92f937d73100b7b8f2c7ca4c5a5d3ae\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\0d7381b214fd51af3b0c815b1dbcbd99\AndroidManifest.xml:17:1-25:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f07c4ca2c4409605d1b567e82700ac6d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\548f36c45676109a7304b643e57aa3d5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\667126eaa20b6859c5260697243fb327\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\b8ebacc446151350eae003568b769cb9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\6d1343812238d810636b690a48a6f036\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\09ac74a4eb328991ff066f7e1a47cfce\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\54ea770fcd8a7f2c3141628598f43177\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\dad863187115122b6defc0c09b6ee83a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b71e8369bdade6bbbfee450ae79a45a5\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\41c8f624562f1adf7d4ab5e0285852bf\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\2dafc52d7660dc95d23c5ec8ab09da55\AndroidManifest.xml:2:1-11:12
+INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:2:1-38:12
+INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:2:1-38:12
+	package
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:3:5-53
+		INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:2:1-38:12
+		INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:2:1-38:12
+		INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.WAKE_LOCK
+ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:5:5-68
+	android:name
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:5:22-65
+uses-feature#android.hardware.type.watch
+ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:7:5-64
+	android:name
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:7:19-61
+application
+ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:9:5-36:19
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\wearable-2.4.0.aar\87a8bed1c4b95f28e4d8e11a33fb48b7\AndroidManifest.xml:9:5-13:19
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\wearable-2.4.0.aar\87a8bed1c4b95f28e4d8e11a33fb48b7\AndroidManifest.xml:9:5-13:19
+MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-wearable-16.0.1.aar\8912b771f13a19cd9214edbe63984a7c\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-wearable-16.0.1.aar\8912b771f13a19cd9214edbe63984a7c\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\5f507e188f523f75087efc82e4882be9\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\5f507e188f523f75087efc82e4882be9\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\c7a461e18352b69c6562ea2cb5405d43\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\c7a461e18352b69c6562ea2cb5405d43\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\e5d408bf4b00af5fc75bfe610fa0555b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\e5d408bf4b00af5fc75bfe610fa0555b\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a92f937d73100b7b8f2c7ca4c5a5d3ae\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a92f937d73100b7b8f2c7ca4c5a5d3ae\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\0d7381b214fd51af3b0c815b1dbcbd99\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\0d7381b214fd51af3b0c815b1dbcbd99\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\2dafc52d7660dc95d23c5ec8ab09da55\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\2dafc52d7660dc95d23c5ec8ab09da55\AndroidManifest.xml:9:5-20
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a92f937d73100b7b8f2c7ca4c5a5d3ae\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:12:9-41
+	android:icon
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:11:9-43
+	android:allowBackup
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:10:9-35
+	android:theme
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:14:9-59
+uses-library#com.google.android.wearable
+ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:15:9-17:39
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\wearable-2.4.0.aar\87a8bed1c4b95f28e4d8e11a33fb48b7\AndroidManifest.xml:10:9-12:40
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\wearable-2.4.0.aar\87a8bed1c4b95f28e4d8e11a33fb48b7\AndroidManifest.xml:10:9-12:40
+	android:required
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:17:13-36
+	android:name
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:16:13-55
+meta-data#com.google.android.wearable.standalone
+ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:23:9-25:36
+	android:value
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:25:13-33
+	android:name
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:24:13-66
+activity#io.github.calumcmccall.teethtimerwatch.MainActivity
+ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:27:9-35:20
+	android:label
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:29:13-45
+	android:name
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:28:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:30:13-34:29
+action#android.intent.action.MAIN
+ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:31:17-69
+	android:name
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:31:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:33:17-77
+	android:name
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml:33:27-74
+uses-sdk
+INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\wearable-2.4.0.aar\87a8bed1c4b95f28e4d8e11a33fb48b7\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\wearable-2.4.0.aar\87a8bed1c4b95f28e4d8e11a33fb48b7\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-wearable-16.0.1.aar\8912b771f13a19cd9214edbe63984a7c\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-wearable-16.0.1.aar\8912b771f13a19cd9214edbe63984a7c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:percent:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\percent-28.0.0.aar\65f6571aa3905100383904e13d322a3e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:percent:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\percent-28.0.0.aar\65f6571aa3905100383904e13d322a3e\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\5f507e188f523f75087efc82e4882be9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\5f507e188f523f75087efc82e4882be9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\c7a461e18352b69c6562ea2cb5405d43\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-tasks-16.0.1.aar\c7a461e18352b69c6562ea2cb5405d43\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\e5d408bf4b00af5fc75bfe610fa0555b\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\e5d408bf4b00af5fc75bfe610fa0555b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\fe369c2b59332b26783fece3de989f20\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-v4-28.0.0.aar\fe369c2b59332b26783fece3de989f20\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:wear:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\wear-28.0.0.aar\3597f8867cddd163fd1a454855f2cc97\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:wear:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\wear-28.0.0.aar\3597f8867cddd163fd1a454855f2cc97\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\4949c5b956a00bb74d4a71c68bdf58af\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-28.0.0.aar\4949c5b956a00bb74d4a71c68bdf58af\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\e4259f341167656758023e326ac5f524\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-media-compat-28.0.0.aar\e4259f341167656758023e326ac5f524\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\849d9735a2f40fc5f7227cf9564e1a95\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\849d9735a2f40fc5f7227cf9564e1a95\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3f4f81fb07c9940d844963b867d07446\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\3f4f81fb07c9940d844963b867d07446\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\9e2b4b80cc7403a1e22f37abcb6c1633\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\9e2b4b80cc7403a1e22f37abcb6c1633\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\9f205a8e39f2947257744ebc832d261a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\9f205a8e39f2947257744ebc832d261a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\2f6a557de560b0c2078a46563d100da7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\2f6a557de560b0c2078a46563d100da7\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\5b0bc4db51ba96f008ae4a0ca42b5483\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\5b0bc4db51ba96f008ae4a0ca42b5483\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\6a25f2222fdcb045da6b7f0e98ace29f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\6a25f2222fdcb045da6b7f0e98ace29f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f6961fbe7f859f829cf4680648f63e80\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f6961fbe7f859f829cf4680648f63e80\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\de61b3f74337e81f263a0c01fc66a15c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\de61b3f74337e81f263a0c01fc66a15c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\ff7349567451bffd681dc1aeac0a692e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\ff7349567451bffd681dc1aeac0a692e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\f848bc8ecfd05ad13d710f7e92a1d527\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\f848bc8ecfd05ad13d710f7e92a1d527\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a92f937d73100b7b8f2c7ca4c5a5d3ae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\a92f937d73100b7b8f2c7ca4c5a5d3ae\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\0d7381b214fd51af3b0c815b1dbcbd99\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\0d7381b214fd51af3b0c815b1dbcbd99\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f07c4ca2c4409605d1b567e82700ac6d\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\f07c4ca2c4409605d1b567e82700ac6d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\548f36c45676109a7304b643e57aa3d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\548f36c45676109a7304b643e57aa3d5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\667126eaa20b6859c5260697243fb327\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\667126eaa20b6859c5260697243fb327\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\b8ebacc446151350eae003568b769cb9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\b8ebacc446151350eae003568b769cb9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\6d1343812238d810636b690a48a6f036\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\6d1343812238d810636b690a48a6f036\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\09ac74a4eb328991ff066f7e1a47cfce\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\09ac74a4eb328991ff066f7e1a47cfce\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\54ea770fcd8a7f2c3141628598f43177\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\54ea770fcd8a7f2c3141628598f43177\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\dad863187115122b6defc0c09b6ee83a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\dad863187115122b6defc0c09b6ee83a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b71e8369bdade6bbbfee450ae79a45a5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\b71e8369bdade6bbbfee450ae79a45a5\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\41c8f624562f1adf7d4ab5e0285852bf\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\41c8f624562f1adf7d4ab5e0285852bf\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\2dafc52d7660dc95d23c5ec8ab09da55\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.0] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.0.aar\2dafc52d7660dc95d23c5ec8ab09da55\AndroidManifest.xml:5:5-7:41
+INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+		ADDED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+		INJECTED from D:\AndroidStudioProjects\TeethTimer\teethtimerwatch\src\main\AndroidManifest.xml
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\5f507e188f523f75087efc82e4882be9\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\5f507e188f523f75087efc82e4882be9\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\5f507e188f523f75087efc82e4882be9\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-base-16.0.1.aar\5f507e188f523f75087efc82e4882be9\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\e5d408bf4b00af5fc75bfe610fa0555b\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\e5d408bf4b00af5fc75bfe610fa0555b\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\Calum\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.0.1.aar\e5d408bf4b00af5fc75bfe610fa0555b\AndroidManifest.xml:24:13-58
