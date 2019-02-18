@@ -4,9 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.*
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import android.view.*
-import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.concurrent.TimeUnit
 
@@ -76,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
                     waveView.pauseAnimation()
                     button_reset.visibility = View.VISIBLE
-                    button_pause_resume.setImageResource(R.drawable.ic_play_arrow_black_24dp)
+                    button_pause_resume.setImageResource(R.drawable.ic_play_arrow_black)
                 } else {
                     //Convert the remaining time into minutes:seconds
                     val remainingMinutes = TimeUnit.MILLISECONDS.toMinutes(millisInFuture)
@@ -142,7 +140,7 @@ class MainActivity : AppCompatActivity() {
         isPaused = false
 
         button_start.visibility = View.INVISIBLE
-        button_alarm_fragment.visibility = View.INVISIBLE
+        button_alarm.visibility = View.INVISIBLE
         button_pause_resume.visibility = View.VISIBLE
 
         progressBar_day.visibility = View.INVISIBLE
@@ -151,7 +149,7 @@ class MainActivity : AppCompatActivity() {
         waveView.startAnimation()
         waveView.progressValue = -10
 
-        button_pause_resume.setImageResource(R.drawable.ic_pause_black_24dp)
+        button_pause_resume.setImageResource(R.drawable.ic_pause_black)
     }
 
     fun pauseTimer(view: View) {
@@ -170,7 +168,7 @@ class MainActivity : AppCompatActivity() {
 
         button_reset.visibility = View.INVISIBLE
 
-        button_pause_resume.setImageResource(R.drawable.ic_pause_black_24dp)
+        button_pause_resume.setImageResource(R.drawable.ic_pause_black)
     }
 
     fun resetTimer(view: View) {
@@ -184,7 +182,7 @@ class MainActivity : AppCompatActivity() {
         button_start.isEnabled = true
 
         button_start.visibility = View.VISIBLE
-        button_alarm_fragment.visibility = View.VISIBLE
+        button_alarm.visibility = View.VISIBLE
         button_pause_resume.visibility = View.INVISIBLE
         button_reset.visibility = View.INVISIBLE
 
