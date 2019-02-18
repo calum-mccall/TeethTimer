@@ -73,7 +73,7 @@
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/alarm_button_description"
                 android:onClick="showAlarms"
-                android:src="@drawable/ic_alarm_black_24dp" />
+                android:src="@drawable/ic_alarm_black" />
 
             <ImageButton
                 android:id="@+id/button_pause_resume"
@@ -99,7 +99,7 @@
                 android:layout_marginTop="8dp"
                 android:contentDescription="@string/reset_button_description"
                 android:onClick="resetTimer"
-                android:src="@drawable/ic_replay_black_24dp"
+                android:src="@drawable/ic_alarm_black"
                 android:visibility="invisible" />
 
         </RelativeLayout>
