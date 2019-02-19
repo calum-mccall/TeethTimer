@@ -129,7 +129,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/D:/Android/plugins/android/lib/android.jar!/images/material_design_icons/av/ic_pause_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/D:/Android/plugins/android/lib/android.jar!/images/material_design_icons/image/ic_edit_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -140,7 +140,7 @@
                         <option name="values">
                           <map>
                             <entry key="height" value="64" />
-                            <entry key="outputName" value="ic_pause_black_64" />
+                            <entry key="outputName" value="ic_edit_black_64" />
                             <entry key="overrideSize" value="true" />
                             <entry key="sourceFile" value="C:\Users\Calum" />
                             <entry key="width" value="64" />
