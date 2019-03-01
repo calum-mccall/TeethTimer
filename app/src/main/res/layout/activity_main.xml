@@ -15,133 +15,153 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/fragment_test"
+    <LinearLayout
+        android:id="@+id/wave"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_toolbar">
 
-        <LinearLayout
-            android:id="@+id/wave"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:gravity="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <me.itangqi.waveloadingview.WaveLoadingView
-                android:id="@+id/waveView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toEndOf="@+id/viewKonfetti"
-                app:layout_constraintStart_toStartOf="@+id/viewKonfetti"
-                app:layout_constraintTop_toTopOf="@+id/viewKonfetti"
-                app:wlv_borderColor="@color/colorPrimaryDark"
-                app:wlv_borderWidth="3dp"
-                app:wlv_progressValue="40"
-                app:wlv_round_rectangle="true"
-                app:wlv_shapeType="circle"
-                app:wlv_titleCenter="2:00"
-                app:wlv_titleCenterColor="@color/colorText"
-                app:wlv_titleCenterSize="24sp"
-                app:wlv_triangle_direction="north"
-                app:wlv_waveAmplitude="50"
-                app:wlv_waveColor="@color/colorPrimaryDark" />
-
-        </LinearLayout>
-
-        <RelativeLayout
-            android:id="@+id/button_helper"
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="20dp"
-            app:layout_constraintEnd_toEndOf="@+id/wave"
-            app:layout_constraintStart_toStartOf="@+id/wave"
-            app:layout_constraintTop_toBottomOf="@+id/wave">
-
-            <Button
-                android:id="@+id/button_start"
-                style="@style/StartButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:contentDescription="@string/start_button_description"
-                android:onClick="startTimer"
-                android:text="@string/start_alarm_button" />
-
-            <ImageButton
-                android:id="@+id/button_alarm"
-                style="@style/AlarmTimerButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/button_start"
-                android:layout_alignStart="@id/button_start"
-                android:layout_alignEnd="@id/button_start"
-                android:layout_marginTop="16dp"
-                android:contentDescription="@string/alarm_button_description"
-                android:onClick="showAlarms"
-                android:src="@drawable/ic_alarm_black" />
-
-            <ImageButton
-                android:id="@+id/button_pause_resume"
-                style="@style/PauseResumeButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@id/button_start"
-                android:layout_alignEnd="@id/button_start"
-                android:layout_marginTop="32dp"
-                android:contentDescription="@string/pause_button_description"
-                android:onClick="startOrPause"
-                android:src="@drawable/ic_pause_black"
-                android:visibility="invisible" />
-
-            <ImageButton
-                android:id="@+id/button_reset"
-                style="@style/AlarmTimerButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/button_start"
-                android:layout_alignStart="@id/button_start"
-                android:layout_alignEnd="@id/button_start"
-                android:layout_marginTop="16dp"
-                android:contentDescription="@string/reset_button_description"
-                android:onClick="resetTimer"
-                android:src="@drawable/ic_replay_black"
-                android:visibility="invisible" />
-
-        </RelativeLayout>
-
-
-        <ProgressBar
-            android:id="@+id/progressBar_day"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:progressBackgroundTint="@color/colorAccent"
-            android:progressTint="@color/colorPrimaryDark"
-            app:layout_constraintEnd_toEndOf="@+id/button_helper"
-            app:layout_constraintStart_toStartOf="@+id/button_helper"
-            app:layout_constraintTop_toBottomOf="@+id/button_helper" />
-
-        <TextView
-            android:id="@+id/textView_streak"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="@string/streak"
-            app:layout_constraintEnd_toEndOf="@+id/progressBar_day"
-            app:layout_constraintStart_toStartOf="@+id/progressBar_day"
-            app:layout_constraintTop_toBottomOf="@+id/progressBar_day" />
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/viewKonfetti"
+            app:layout_constraintStart_toStartOf="@+id/viewKonfetti"
+            app:layout_constraintTop_toTopOf="@+id/viewKonfetti"
+            app:wlv_borderColor="@color/colorPrimaryDark"
+            app:wlv_borderWidth="3dp"
+            app:wlv_progressValue="40"
+            app:wlv_round_rectangle="true"
+            app:wlv_shapeType="circle"
+            app:wlv_titleCenter="2:00"
+            app:wlv_titleCenterColor="@color/colorText"
+            app:wlv_titleCenterSize="24sp"
+            app:wlv_triangle_direction="north"
+            app:wlv_waveAmplitude="50"
+            app:wlv_waveColor="@color/colorPrimaryDark" />
 
-        <nl.dionsegijn.konfetti.KonfettiView
-            android:id="@+id/viewKonfetti"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/division"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/wave">
 
     </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/division">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/fragment_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/button_helper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/fragment_test"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:paddingBottom="20dp">
+
+                <Button
+                    android:id="@+id/button_start"
+                    style="@style/StartButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:contentDescription="@string/start_button_description"
+                    android:onClick="startTimer"
+                    android:text="@string/start_alarm_button" />
+
+                <ImageButton
+                    android:id="@+id/button_alarm"
+                    style="@style/AlarmTimerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button_start"
+                    android:layout_alignStart="@id/button_start"
+                    android:layout_alignEnd="@id/button_start"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/alarm_button_description"
+                    android:onClick="showAlarms"
+                    android:src="@drawable/ic_alarm_black" />
+
+                <ImageButton
+                    android:id="@+id/button_pause_resume"
+                    style="@style/PauseResumeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/button_start"
+                    android:layout_alignEnd="@id/button_start"
+                    android:layout_marginTop="32dp"
+                    android:contentDescription="@string/pause_button_description"
+                    android:onClick="startOrPause"
+                    android:src="@drawable/ic_pause_black"
+                    android:visibility="invisible" />
+
+                <ImageButton
+                    android:id="@+id/button_reset"
+                    style="@style/AlarmTimerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/button_start"
+                    android:layout_alignStart="@id/button_start"
+                    android:layout_alignEnd="@id/button_start"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/reset_button_description"
+                    android:onClick="resetTimer"
+                    android:src="@drawable/ic_replay_black"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+
+            <ProgressBar
+                android:id="@+id/progressBar_day"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:progressBackgroundTint="@color/colorAccent"
+                android:progressTint="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="@+id/button_helper"
+                app:layout_constraintStart_toStartOf="@+id/button_helper"
+                app:layout_constraintTop_toBottomOf="@+id/button_helper" />
+
+            <TextView
+                android:id="@+id/textView_streak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/streak"
+                app:layout_constraintEnd_toEndOf="@+id/progressBar_day"
+                app:layout_constraintStart_toStartOf="@+id/progressBar_day"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar_day" />
+
+            <nl.dionsegijn.konfetti.KonfettiView
+                android:id="@+id/viewKonfetti"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
