@@ -57,67 +57,67 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-                <Button
-                    android:id="@+id/button_start"
-                    style="@style/StartButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_centerHorizontal="true"
-                    android:contentDescription="@string/start_button_description"
-                    android:onClick="startTimer"
-                    android:text="@string/start_alarm_button" />
+            <Button
+                android:id="@+id/button_start"
+                style="@style/StartButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/start_button_description"
+                android:onClick="startTimer"
+                android:text="@string/start_alarm_button" />
 
-                <ImageButton
-                    android:id="@+id/button_alarm"
-                    style="@style/AlarmTimerButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/alarm_button_description"
-                    android:onClick="showAlarms"
-                    android:src="@drawable/ic_alarm_black"
-                    android:layout_below="@id/button_start"
-                    android:layout_alignStart="@id/button_start"
-                    android:layout_alignEnd="@id/button_start"/>
+            <ImageButton
+                android:id="@+id/button_alarm"
+                style="@style/AlarmTimerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/alarm_button_description"
+                android:onClick="showAlarms"
+                android:src="@drawable/ic_alarm_black"
+                android:layout_below="@id/button_start"
+                android:layout_alignStart="@id/button_start"
+                android:layout_alignEnd="@id/button_start"/>
 
-                <ImageButton
-                    android:id="@+id/button_pause_resume"
-                    style="@style/PauseResumeButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="@string/pause_button_description"
-                    android:onClick="startOrPause"
-                    android:src="@drawable/ic_pause_black"
-                    android:visibility="invisible"
-                    android:layout_alignStart="@id/button_start"
-                    android:layout_alignEnd="@id/button_start"/>
+            <ImageButton
+                android:id="@+id/button_pause_resume"
+                style="@style/PauseResumeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/pause_button_description"
+                android:onClick="startOrPause"
+                android:src="@drawable/ic_pause_black"
+                android:visibility="invisible"
+                android:layout_alignStart="@id/button_start"
+                android:layout_alignEnd="@id/button_start"/>
 
-                <ImageButton
-                    android:id="@+id/button_reset"
-                    style="@style/AlarmTimerButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:contentDescription="@string/reset_button_description"
-                    android:onClick="resetTimer"
-                    android:src="@drawable/ic_replay_black"
-                    android:visibility="invisible"
-                    android:layout_below="@+id/button_start"
-                    android:layout_alignStart="@+id/button_start"
-                    android:layout_alignEnd="@id/button_start"/>
+            <ImageButton
+                android:id="@+id/button_reset"
+                style="@style/AlarmTimerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/reset_button_description"
+                android:onClick="resetTimer"
+                android:src="@drawable/ic_replay_black"
+                android:visibility="invisible"
+                android:layout_below="@+id/button_start"
+                android:layout_alignStart="@+id/button_start"
+                android:layout_alignEnd="@id/button_start"/>
 
-                <ProgressBar
-                    android:id="@+id/progressBar_day"
-                    style="@android:style/Widget.ProgressBar.Horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:progressBackgroundTint="@color/colorAccent"
-                    android:progressTint="@color/colorPrimaryDark"
-                    android:layout_below="@id/button_reset"
-                    android:layout_alignStart="@id/button_start"
-                    android:layout_alignEnd="@id/button_start"/>
+            <ProgressBar
+                android:id="@+id/progressBar_day"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:progressBackgroundTint="@color/colorAccent"
+                android:progressTint="@color/colorPrimaryDark"
+                android:layout_below="@id/button_reset"
+                android:layout_alignStart="@id/button_start"
+                android:layout_alignEnd="@id/button_start"/>
 
             <TextView
                 android:id="@+id/textView_streak"
@@ -130,10 +130,10 @@
                 android:text="@string/streak"
                 android:textAlignment="center" />
 
-                <nl.dionsegijn.konfetti.KonfettiView
-                    android:id="@+id/viewKonfetti"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+            <nl.dionsegijn.konfetti.KonfettiView
+                android:id="@+id/viewKonfetti"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
         </RelativeLayout>
 
