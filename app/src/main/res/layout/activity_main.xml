@@ -119,15 +119,16 @@
                     android:layout_alignStart="@id/button_start"
                     android:layout_alignEnd="@id/button_start"/>
 
-                <TextView
-                    android:id="@+id/textView_streak"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/streak"
-                    android:layout_below="@id/progressBar_day"
-                    android:layout_alignStart="@id/progressBar_day"
-                    android:layout_alignEnd="@id/progressBar_day"/>
+            <TextView
+                android:id="@+id/textView_streak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progressBar_day"
+                android:layout_alignStart="@id/progressBar_day"
+                android:layout_alignEnd="@id/progressBar_day"
+                android:layout_marginTop="8dp"
+                android:text="@string/streak"
+                android:textAlignment="center" />
 
                 <nl.dionsegijn.konfetti.KonfettiView
                     android:id="@+id/viewKonfetti"
