@@ -1,8 +1,18 @@
 # Teeth Timer
 
-Teeth timer is an Android app built in Kotlin and Java, 
+Teeth timer is an Android app built in Kotlin and Java.
 
 Available on the [Google Play Store](https://play.google.com/store/apps/details?id=io.github.calumcmccall.teethtimer).
+
+Over 15,000 downloads.
+
+## Motivation
+
+This was a personal project undertaken with the goal of fully designing, developing and then releasing an app on the Google Play Store.
+
+It was an opportunity to learn Kotlin, a language I had not previously used, as well as a chance to work through the entire software development cycle.
+
+## The App
 
 - The app uses a simple and visual 2 minute timer to make sure you're brushing for the correct time, every time.
 
@@ -15,9 +25,3 @@ Available on the [Google Play Store](https://play.google.com/store/apps/details?
 - With 30 second reminders to ensure that no tooth gets left behind! Use the apps vibrations to remind you to brush the whole of your mouth and ensure you don't neglect any teeth!
 
 ![Image showing the timer progressing](https://user-images.githubusercontent.com/12415524/190394658-a8dca122-554c-4cd5-9fb6-63a1fee1ea22.png)
-
-## Motivation
-
-This was a personal project undertaken with the goal of fully designing, developing and then releasing an app on the Google Play Store.
-
-It was an opportunity to learn Kotlin, a language I had not previously used, as well as a chance to work through the entire software development cycle.
