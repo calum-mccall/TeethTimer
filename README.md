@@ -1,10 +1,8 @@
 # Teeth Timer
 
-Teeth timer is an Android app built in Kotlin and Java.
+Teeth timer is an Android app built in Kotlin and Java with over 15,000 downloads to date.
 
 Available on the [Google Play Store](https://play.google.com/store/apps/details?id=io.github.calumcmccall.teethtimer).
-
-Over 15,000 downloads.
 
 ## Motivation
 
